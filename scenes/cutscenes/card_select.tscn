@@ -22,6 +22,22 @@ texture = ExtResource("2_x4awn")
 stretch_mode = 1
 script = ExtResource("3_01w78")
 
+[node name="reminderText" type="RichTextLabel" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 317.0
+offset_top = 40.0
+offset_right = 823.0
+offset_bottom = 187.0
+grow_horizontal = 2
+theme = ExtResource("6_lym3w")
+theme_override_font_sizes/normal_font_size = 48
+bbcode_enabled = true
+text = "
+[tornado radius=5.0 freq=2.0 connected=1] pick a card..."
+fit_content = true
+
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -30,9 +46,9 @@ offset_bottom = 40.0
 
 [node name="Card3" type="TextureButton" parent="UI"]
 layout_mode = 0
-offset_left = 291.0
+offset_left = 265.0
 offset_top = 334.941
-offset_right = 435.0
+offset_right = 409.0
 offset_bottom = 574.941
 rotation = -0.361283
 scale = Vector2(1.5, 1.5)
@@ -41,9 +57,9 @@ script = ExtResource("5_mrpq8")
 
 [node name="Card" type="TextureButton" parent="UI"]
 layout_mode = 0
-offset_left = 391.0
+offset_left = 365.0
 offset_top = 285.0
-offset_right = 535.0
+offset_right = 509.0
 offset_bottom = 525.0
 rotation = -0.13439
 scale = Vector2(1.5, 1.5)
@@ -52,9 +68,9 @@ script = ExtResource("5_mrpq8")
 
 [node name="Card5" type="TextureButton" parent="UI"]
 layout_mode = 0
-offset_left = 712.0
+offset_left = 686.0
 offset_top = 268.0
-offset_right = 856.0
+offset_right = 830.0
 offset_bottom = 508.0
 rotation = 0.363028
 scale = Vector2(1.5, 1.5)
@@ -63,9 +79,9 @@ script = ExtResource("5_mrpq8")
 
 [node name="Card4" type="TextureButton" parent="UI"]
 layout_mode = 0
-offset_left = 593.0
+offset_left = 567.0
 offset_top = 253.0
-offset_right = 737.0
+offset_right = 711.0
 offset_bottom = 493.0
 rotation = 0.144862
 scale = Vector2(1.5, 1.5)
@@ -74,31 +90,22 @@ script = ExtResource("5_mrpq8")
 
 [node name="Card2" type="TextureButton" parent="UI"]
 layout_mode = 0
-offset_left = 490.0
+offset_left = 464.0
 offset_top = 254.0
-offset_right = 634.0
+offset_right = 608.0
 offset_bottom = 494.0
 scale = Vector2(1.5, 1.5)
 texture_normal = ExtResource("4_24mv7")
 script = ExtResource("5_mrpq8")
 
-[node name="reminderText" type="RichTextLabel" parent="UI"]
-layout_mode = 0
-offset_left = 329.0
-offset_top = 45.0
-offset_right = 835.0
-offset_bottom = 192.0
-theme = ExtResource("6_lym3w")
-theme_override_font_sizes/normal_font_size = 48
-bbcode_enabled = true
-text = "
-[tornado radius=5.0 freq=2.0 connected=1] pick a card..."
-fit_content = true
-
 [node name="Hand" type="Sprite2D" parent="."]
-position = Vector2(598, 583)
+position = Vector2(576, 583)
 scale = Vector2(2, 2)
 texture = ExtResource("5_xmgkf")
+
+[node name="RevealedCard" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(1.75, 1.75)
 
 [connection signal="mouse_entered" from="UI/Card3" to="UI/Card3" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="UI/Card3" to="UI/Card3" method="_on_mouse_exited"]
