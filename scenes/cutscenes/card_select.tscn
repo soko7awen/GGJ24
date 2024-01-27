@@ -1,6 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://cvkt8b4hqw20v"]
+[gd_scene load_steps=4 format=3 uid="uid://cvkt8b4hqw20v"]
 
 [ext_resource type="Script" path="res://scripts/card_select.gd" id="1_io1nf"]
+[ext_resource type="Texture2D" uid="uid://bg4ckbg38kh4c" path="res://assets/sprites/scrollingStar_01.png" id="2_x4awn"]
+[ext_resource type="Script" path="res://scripts/scrolling.gd" id="3_01w78"]
 
 [node name="Wheel" type="Node2D"]
 script = ExtResource("1_io1nf")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -4000.0
+offset_top = -3000.0
+offset_right = -674.0
+offset_bottom = -652.0
+scale = Vector2(2, 2)
+texture = ExtResource("2_x4awn")
+stretch_mode = 1
+script = ExtResource("3_01w78")

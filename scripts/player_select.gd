@@ -7,7 +7,7 @@ var playerNames = ["","","","","",""]
 
 func _process(delta):
 	for i in players.get_children().size():
-		playerNames[i] = players.get_child(i).get_child(1).text
+		playerNames[i] = players.get_child(i).get_child(2).text
 	if playerNames[0] and playerNames[1] and playerNames[2] and playerNames[3]:
 		$UI/startButton.disabled = false
 		$UI/startButton.mouse_default_cursor_shape = 2
