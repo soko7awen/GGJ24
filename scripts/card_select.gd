@@ -25,3 +25,5 @@ func _ready():
 			pass
 	gameController.lastMinigame = nextMinigame
 
+func revealCard():
+	
