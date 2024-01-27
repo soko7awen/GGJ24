@@ -22,6 +22,7 @@ scale = Vector2(2, 2)
 texture = ExtResource("2_7hh1k")
 stretch_mode = 1
 script = ExtResource("3_fmaw2")
+SPEED = null
 
 [node name="RichTextLabel" type="RichTextLabel" parent="UI"]
 layout_mode = 0
@@ -31,7 +32,7 @@ offset_right = 602.0
 offset_bottom = 203.0
 text = "title"
 
-[node name="playButton" type="Button" parent="UI"]
+[node name="startButton" type="Button" parent="UI"]
 layout_mode = 0
 offset_left = 517.0
 offset_top = 227.0
@@ -48,5 +49,5 @@ offset_right = 602.0
 offset_bottom = 384.0
 text = "stop"
 
-[connection signal="pressed" from="UI/playButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="UI/startButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="UI/quitButton" to="." method="_on_quit_button_pressed"]

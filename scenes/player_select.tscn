@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/player_select.gd" id="1_uymep"]
 [ext_resource type="Texture2D" uid="uid://bg4ckbg38kh4c" path="res://assets/sprites/scrollingStar_01.png" id="2_brsje"]
-[ext_resource type="Theme" path="res://assets/base_theme.tres" id="2_oau2t"]
+[ext_resource type="Theme" uid="uid://b5i2s2wgetsyw" path="res://assets/base_theme.tres" id="2_oau2t"]
 [ext_resource type="Theme" uid="uid://biufirpv8wudy" path="res://assets/instruction_theme.tres" id="2_tl41j"]
 [ext_resource type="Script" path="res://scenes/scrolling.gd" id="3_ekvke"]
 
@@ -22,10 +22,10 @@ offset_bottom = 40.0
 
 [node name="TextureRect" type="TextureRect" parent="UI"]
 layout_mode = 0
-offset_left = -3496.0
-offset_top = -2720.0
-offset_right = -437.0
-offset_bottom = -552.0
+offset_left = -4000.0
+offset_top = -3000.0
+offset_right = -941.0
+offset_bottom = -832.0
 scale = Vector2(2, 2)
 texture = ExtResource("2_brsje")
 stretch_mode = 1
@@ -44,6 +44,14 @@ text = "[wave amp=50.0 freq=4.0 connected=1]
 >
 [/wave]"
 fit_content = true
+
+[node name="Button" type="Button" parent="UI/nextarrow"]
+layout_mode = 0
+offset_left = -6.0
+offset_top = 48.0
+offset_right = 44.0
+offset_bottom = 113.0
+flat = true
 
 [node name="optional" type="RichTextLabel" parent="UI"]
 layout_mode = 0
@@ -71,7 +79,7 @@ text = "
 [wave amp=50.0 freq=4.0 connected=1]add players[/wave]"
 fit_content = true
 
-[node name="nextButton" type="Button" parent="UI"]
+[node name="startButton" type="Button" parent="UI"]
 layout_mode = 0
 offset_left = 436.0
 offset_top = 581.0
@@ -269,4 +277,4 @@ bbcode_enabled = true
 text = "[rainbow freq=0.25 sat=0.5 val=0.6]start[/rainbow]"
 fit_content = true
 
-[connection signal="pressed" from="UI/nextButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="UI/startButton" to="." method="_on_start_button_pressed"]
