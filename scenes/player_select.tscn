@@ -1,8 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://7jftddgwah53"]
+[gd_scene load_steps=13 format=3 uid="uid://7jftddgwah53"]
 
 [ext_resource type="Script" path="res://scripts/player_select.gd" id="1_uymep"]
 [ext_resource type="Texture2D" uid="uid://bg4ckbg38kh4c" path="res://assets/sprites/scrollingStar_01.png" id="2_brsje"]
-[ext_resource type="Theme" path="res://assets/base_theme.tres" id="2_oau2t"]
+[ext_resource type="Theme" uid="uid://b5i2s2wgetsyw" path="res://assets/base_theme.tres" id="2_oau2t"]
 [ext_resource type="Theme" uid="uid://biufirpv8wudy" path="res://assets/instruction_theme.tres" id="2_tl41j"]
 [ext_resource type="Script" path="res://scripts/scrolling.gd" id="3_ekvke"]
 [ext_resource type="Texture2D" uid="uid://ddqgj8afiw1a5" path="res://assets/sprites/jesters/jester_red.png" id="6_t80o8"]
@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://dcsn6gwunnpyu" path="res://assets/sprites/jesters/jester_yellow.png" id="9_xhe6s"]
 [ext_resource type="Texture2D" uid="uid://c270ieah12ya" path="res://assets/sprites/jesters/jester_orange.png" id="10_0mij3"]
 [ext_resource type="Texture2D" uid="uid://omqh52cj8wuy" path="res://assets/sprites/jesters/jester_pink.png" id="11_pu77u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cjco5"]
 
 [node name="Playerselect" type="Node2D"]
 texture_filter = 1
@@ -138,6 +140,20 @@ bbcode_enabled = true
 text = "[rainbow freq=0.25 sat=0.3 val=0.3]start[/rainbow]"
 fit_content = true
 
+[node name="helpText" type="RichTextLabel" parent="UI/startButton"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 56.0
+offset_right = 253.0
+offset_bottom = 121.0
+mouse_filter = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_tl41j")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "[wave amp=5.0 freq=10]name 4 to start"
+fit_content = true
+
 [node name="Players" type="Control" parent="UI"]
 texture_filter = 1
 anchors_preset = 0
@@ -176,6 +192,7 @@ theme = ExtResource("2_oau2t")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_placeholder_color = Color(0.337255, 0.337255, 0.337255, 1)
 theme_override_font_sizes/font_size = 24
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cjco5")
 placeholder_text = "Name..."
 alignment = 1
 max_length = 10
@@ -205,6 +222,7 @@ scale = Vector2(1.5, 1.5)
 texture = ExtResource("7_6tot8")
 
 [node name="PlayerInput" type="LineEdit" parent="UI/Players/Player2"]
+layout_mode = 0
 offset_left = 44.0
 offset_top = 461.0
 offset_right = 229.0
@@ -213,6 +231,7 @@ theme = ExtResource("2_oau2t")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_placeholder_color = Color(0.337255, 0.337255, 0.337255, 1)
 theme_override_font_sizes/font_size = 24
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cjco5")
 placeholder_text = "Name..."
 alignment = 1
 max_length = 10
@@ -242,6 +261,7 @@ scale = Vector2(1.5, 1.5)
 texture = ExtResource("8_4vavq")
 
 [node name="PlayerInput" type="LineEdit" parent="UI/Players/Player3"]
+layout_mode = 0
 offset_left = 44.0
 offset_top = 461.0
 offset_right = 229.0
@@ -250,6 +270,7 @@ theme = ExtResource("2_oau2t")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_placeholder_color = Color(0.337255, 0.337255, 0.337255, 1)
 theme_override_font_sizes/font_size = 24
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cjco5")
 placeholder_text = "Name..."
 alignment = 1
 max_length = 10
@@ -279,6 +300,7 @@ scale = Vector2(1.5, 1.5)
 texture = ExtResource("9_xhe6s")
 
 [node name="PlayerInput" type="LineEdit" parent="UI/Players/Player4"]
+layout_mode = 0
 offset_left = 44.0
 offset_top = 461.0
 offset_right = 229.0
@@ -287,6 +309,7 @@ theme = ExtResource("2_oau2t")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_placeholder_color = Color(0.337255, 0.337255, 0.337255, 1)
 theme_override_font_sizes/font_size = 24
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cjco5")
 placeholder_text = "Name..."
 alignment = 1
 max_length = 10
@@ -316,6 +339,7 @@ scale = Vector2(1.5, 1.5)
 texture = ExtResource("10_0mij3")
 
 [node name="PlayerInput" type="LineEdit" parent="UI/Players/Player5"]
+layout_mode = 0
 offset_left = 44.0
 offset_top = 461.0
 offset_right = 229.0
@@ -324,6 +348,7 @@ theme = ExtResource("2_oau2t")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_placeholder_color = Color(0.337255, 0.337255, 0.337255, 1)
 theme_override_font_sizes/font_size = 24
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cjco5")
 placeholder_text = "Name..."
 alignment = 1
 max_length = 10
@@ -353,6 +378,7 @@ scale = Vector2(1.5, 1.5)
 texture = ExtResource("11_pu77u")
 
 [node name="PlayerInput" type="LineEdit" parent="UI/Players/Player6"]
+layout_mode = 0
 offset_left = 44.0
 offset_top = 461.0
 offset_right = 229.0
@@ -361,6 +387,7 @@ theme = ExtResource("2_oau2t")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_placeholder_color = Color(0.337255, 0.337255, 0.337255, 1)
 theme_override_font_sizes/font_size = 24
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cjco5")
 placeholder_text = "Name..."
 alignment = 1
 max_length = 10
