@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/player_select.gd" id="1_uymep"]
 [ext_resource type="Texture2D" uid="uid://bg4ckbg38kh4c" path="res://assets/sprites/scrollingStar_01.png" id="2_brsje"]
-[ext_resource type="Theme" path="res://assets/base_theme.tres" id="2_oau2t"]
+[ext_resource type="Theme" uid="uid://b5i2s2wgetsyw" path="res://assets/base_theme.tres" id="2_oau2t"]
 [ext_resource type="Theme" uid="uid://biufirpv8wudy" path="res://assets/instruction_theme.tres" id="2_tl41j"]
 [ext_resource type="Script" path="res://scenes/scrolling.gd" id="3_ekvke"]
 
@@ -54,6 +54,7 @@ offset_left = -8.0
 offset_top = 48.0
 offset_right = 42.0
 offset_bottom = 113.0
+focus_mode = 0
 flat = true
 
 [node name="leftarrow" type="RichTextLabel" parent="UI"]
@@ -75,6 +76,7 @@ layout_mode = 0
 offset_top = 48.0
 offset_right = 50.0
 offset_bottom = 113.0
+focus_mode = 0
 flat = true
 
 [node name="optional" type="RichTextLabel" parent="UI"]
@@ -109,8 +111,10 @@ offset_left = 436.0
 offset_top = 581.0
 offset_right = 684.0
 offset_bottom = 639.0
+focus_mode = 0
 theme = ExtResource("2_oau2t")
 disabled = true
+flat = true
 
 [node name="startText" type="RichTextLabel" parent="UI/startButton"]
 layout_mode = 0
@@ -119,10 +123,11 @@ offset_top = -1.0
 offset_right = 254.0
 offset_bottom = 64.0
 mouse_filter = 2
+mouse_default_cursor_shape = 2
 theme = ExtResource("2_tl41j")
 theme_override_font_sizes/normal_font_size = 48
 bbcode_enabled = true
-text = "[rainbow freq=0.25 sat=0.5 val=0.6]start[/rainbow]"
+text = "[rainbow freq=0.25 sat=0.3 val=0.3]start[/rainbow]"
 fit_content = true
 
 [node name="Players" type="Control" parent="UI"]
