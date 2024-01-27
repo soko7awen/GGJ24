@@ -57,6 +57,7 @@ offset_bottom = 113.0
 flat = true
 
 [node name="leftarrow" type="RichTextLabel" parent="UI"]
+layout_mode = 0
 offset_left = 1153.0
 offset_top = 247.0
 offset_right = 1194.0

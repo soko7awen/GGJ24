@@ -16,11 +16,6 @@ func _on_left_button_pressed():
 	camera.position.x -= 1152
 
 func _on_start_button_pressed():
-<<<<<<< Updated upstream
-	$"..".loadScene(self,toScene)
-
-=======
 	var main = get_tree().root.get_child(0)
-
 	main.loadScene(self,toScene)
->>>>>>> Stashed changes
+
