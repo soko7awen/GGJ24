@@ -1,6 +1,6 @@
 extends Node2D
 var players = []
-var lastMinigame = null
+var lastMinigame = 5
 
 func loadScene(old_scene,scene_path):
 	var newScene = load(scene_path).instantiate()

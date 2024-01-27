@@ -30,9 +30,8 @@ func _on_left_button_pressed():
 	camera.position.x -= 1152
 
 func _on_start_button_pressed():
-	var main = get_tree().root.get_child(0)
 	for i in playerNames.size():
 		if playerNames[i] != "":
-			main.players.append([i,playerNames[i]])
-	main.loadScene(self,toScene)
+			gameController.players.append([i,playerNames[i]])
+	gameController.loadScene(self,toScene)
 
