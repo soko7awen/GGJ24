@@ -10,12 +10,10 @@ func _process(delta):
 		playerNames[i] = players.get_child(i).get_child(2).text
 	if playerNames[0] and playerNames[1] and playerNames[2] and playerNames[3]:
 		$UI/startButton.disabled = false
-		$UI/startButton.get_child(1).visible = false
 		$UI/startButton.mouse_default_cursor_shape = 2
 		$UI/startButton/startText.text = "[rainbow freq=0.25 sat=0.8 val=0.8]start[/rainbow]"
 	else:
 		$UI/startButton.disabled = true
-		$UI/startButton.get_child(1).visible = true
 		$UI/startButton.mouse_default_cursor_shape = 8
 		$UI/startButton/startText.text = "[rainbow freq=0.25 sat=0.3 val=0.3]start[/rainbow]"
 
@@ -27,7 +25,7 @@ func _on_left_button_pressed():
 
 func _on_start_button_pressed():
 	var main = get_tree().root.get_child(0)
-	for i in $UI/Players.get_children():
-		main.players = playerNames
-		main.loadScene(self,toScene)
+	for i in playerNames.size():
+		main.players[[i]] = playerNames[i]
+	main.loadScene(self,toScene)
 
