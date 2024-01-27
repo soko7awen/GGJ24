@@ -1,8 +1,8 @@
 extends Node
-var toScene = "game"
+var toScene = "res://scenes/playerselect.tscn"
 
 func _on_start_button_pressed():
-	pass # call the fuckin scene loader to Load the Scene
+	$"..".loadScene(toScene)
 
 func _on_quit_button_pressed():
 	get_tree().quit()

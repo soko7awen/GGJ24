@@ -1,6 +1,7 @@
 extends Node2D
 var players = []
 
-func _process(delta):
-	pass
-
+func loadScene(scene_path):
+	var newScene = load(scene_path).instantiate()
+	get_child(0).queue_free()
+	add_child(newScene)
