@@ -23,5 +23,7 @@ func _on_left_button_pressed():
 
 func _on_start_button_pressed():
 	var main = get_tree().root.get_child(0)
+	for i in $UI/Players.get_children():
+		main.players[i] = i.get_child(1).text
 	main.loadScene(self,toScene)
 
