@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://scripts/player_select.gd" id="1_uymep"]
 [ext_resource type="Texture2D" uid="uid://bg4ckbg38kh4c" path="res://assets/sprites/scrollingStar_01.png" id="2_brsje"]
-[ext_resource type="Theme" uid="uid://b5i2s2wgetsyw" path="res://assets/base_theme.tres" id="2_oau2t"]
+[ext_resource type="Theme" path="res://assets/base_theme.tres" id="2_oau2t"]
 [ext_resource type="Theme" uid="uid://biufirpv8wudy" path="res://assets/instruction_theme.tres" id="2_tl41j"]
 [ext_resource type="Script" path="res://scripts/scrolling.gd" id="3_ekvke"]
-[ext_resource type="Texture2D" uid="uid://bl7k3wggmw7c1" path="res://assets/sprites/ui/arrow_small_purple.png" id="4_0c7dd"]
+[ext_resource type="Texture2D" uid="uid://bbtba0hih1xsh" path="res://assets/sprites/ui/arrow_small_white_pressed.png" id="4_p138c"]
 [ext_resource type="Texture2D" uid="uid://ddqgj8afiw1a5" path="res://assets/sprites/jesters/jester_red.png" id="6_t80o8"]
 [ext_resource type="Texture2D" uid="uid://btc25181wrjyl" path="res://assets/sprites/jesters/jester_blue.png" id="7_6tot8"]
 [ext_resource type="Texture2D" uid="uid://husftd5qujsp" path="res://assets/sprites/jesters/jester_green.png" id="8_4vavq"]
@@ -54,7 +54,7 @@ offset_bottom = 329.0
 scale = Vector2(2, 2)
 focus_mode = 0
 mouse_default_cursor_shape = 2
-texture_normal = ExtResource("4_0c7dd")
+texture_normal = ExtResource("4_p138c")
 flip_h = true
 
 [node name="rightarrow" type="RichTextLabel" parent="UI"]
@@ -81,7 +81,7 @@ offset_bottom = 329.0
 scale = Vector2(2, 2)
 focus_mode = 0
 mouse_default_cursor_shape = 2
-texture_normal = ExtResource("4_0c7dd")
+texture_normal = ExtResource("4_p138c")
 
 [node name="leftarrow" type="RichTextLabel" parent="UI"]
 visible = false

@@ -6,9 +6,13 @@ var toScene = "res://scenes/cutscenes/the_card_that_flips.tscn"
 var playerNames = ["","","","","",""]
 
 func _process(delta):
+	var playerCount = 0
 	for i in players.get_children().size():
-		playerNames[i] = players.get_child(i).get_child(2).text
-	if playerNames[0] and playerNames[1] and playerNames[2] and playerNames[3]:
+		var playerName = players.get_child(i).get_child(2).text
+		playerNames[i] = playerName
+		if playerName != "":
+			playerCount += 1
+	if playerCount >= 4:
 		$UI/startButton.disabled = false
 		$UI/startButton.get_child(1).visible = false
 		$UI/startButton.mouse_default_cursor_shape = 2
