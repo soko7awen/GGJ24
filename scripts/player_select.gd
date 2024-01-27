@@ -6,5 +6,5 @@ var player = 1
 func _process(delta):
 	pass
 
-func _on_next_button_pressed():
+func _on_start_button_pressed():
 	pass
