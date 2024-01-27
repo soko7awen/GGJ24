@@ -1,8 +1,6 @@
 extends Node2D
-
-
-func _ready():
-	pass # Replace with function body.
+var players = []
 
 func _process(delta):
 	pass
+

@@ -12,6 +12,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="UI"]
+layout_mode = 0
 offset_left = 544.0
 offset_top = 164.0
 offset_right = 602.0
@@ -28,6 +29,7 @@ text = "go
 "
 
 [node name="quitButton" type="Button" parent="UI"]
+layout_mode = 0
 offset_left = 516.0
 offset_top = 332.0
 offset_right = 602.0

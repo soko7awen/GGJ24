@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://7jftddgwah53"]
+
+[ext_resource type="Script" path="res://scenes/playerselect.gd" id="1_uymep"]
+
+[node name="Playerselect" type="Node2D"]
+script = ExtResource("1_uymep")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PlayerText" type="RichTextLabel" parent="UI"]
+layout_mode = 0
+offset_left = 464.0
+offset_top = 227.0
+offset_right = 686.0
+offset_bottom = 267.0
+text = "Input Player 1 Name"
+
+[node name="PlayerInput" type="LineEdit" parent="UI"]
+layout_mode = 0
+offset_left = 456.0
+offset_top = 265.0
+offset_right = 641.0
+offset_bottom = 308.0
+placeholder_text = "Name..."
+
+[node name="nextButton" type="Button" parent="."]
+offset_left = 507.0
+offset_top = 357.0
+offset_right = 593.0
+offset_bottom = 390.0
+text = "next"
+
+[connection signal="pressed" from="nextButton" to="." method="_on_next_button_pressed"]
