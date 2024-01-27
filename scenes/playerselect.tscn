@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://7jftddgwah53"]
 
-[ext_resource type="Script" path="res://scripts/playerselect.gd" id="1_uymep"]
-[ext_resource type="Theme" uid="uid://b5i2s2wgetsyw" path="res://assets/base_theme.tres" id="2_oau2t"]
+[ext_resource type="Script" path="res://scripts/player_select.gd" id="1_uymep"]
+[ext_resource type="Theme" path="res://assets/base_theme.tres" id="2_oau2t"]
 
 [node name="Playerselect" type="Node2D"]
 script = ExtResource("1_uymep")
@@ -17,6 +17,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="addText2" type="RichTextLabel" parent="UI"]
+layout_mode = 0
 offset_left = 1259.0
 offset_top = -30.0
 offset_right = 1537.0
