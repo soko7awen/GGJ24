@@ -1,0 +1,163 @@
+[gd_scene load_steps=3 format=3 uid="uid://7jftddgwah53"]
+
+[ext_resource type="Script" path="res://scripts/player_select.gd" id="1_uymep"]
+[ext_resource type="Theme" path="res://assets/base_theme.tres" id="2_oau2t"]
+
+[node name="Playerselect" type="Node2D"]
+script = ExtResource("1_uymep")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_left = 0
+limit_top = 0
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="addText2" type="RichTextLabel" parent="UI"]
+layout_mode = 0
+offset_left = 1259.0
+offset_top = -30.0
+offset_right = 1537.0
+offset_bottom = 117.0
+theme = ExtResource("2_oau2t")
+theme_override_font_sizes/normal_font_size = 48
+bbcode_enabled = true
+text = "
+[wave amp=50.0 freq=4.0 connected=1]optional[/wave]"
+fit_content = true
+
+[node name="addText" type="RichTextLabel" parent="UI"]
+layout_mode = 0
+offset_left = 360.0
+offset_top = -29.0
+offset_right = 746.0
+offset_bottom = 118.0
+theme = ExtResource("2_oau2t")
+theme_override_font_sizes/normal_font_size = 48
+bbcode_enabled = true
+text = "
+[wave amp=50.0 freq=4.0 connected=1]add players[/wave]"
+fit_content = true
+
+[node name="Player1" type="Control" parent="UI"]
+anchors_preset = 0
+offset_left = 20.0
+offset_right = 60.0
+offset_bottom = 40.0
+
+[node name="PlayerText" type="RichTextLabel" parent="UI/Player1"]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 78.0
+offset_right = 233.0
+offset_bottom = 118.0
+theme = ExtResource("2_oau2t")
+bbcode_enabled = true
+text = "[wave amp=5.0 freq=2.0 connected=1]Player 1[/wave]"
+
+[node name="PlayerInput" type="LineEdit" parent="UI/Player1"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 530.0
+offset_right = 235.0
+offset_bottom = 573.0
+theme = ExtResource("2_oau2t")
+theme_override_font_sizes/font_size = 24
+placeholder_text = "Name..."
+alignment = 1
+
+[node name="Player2" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 288.0
+offset_right = 328.0
+offset_bottom = 40.0
+
+[node name="PlayerText" type="RichTextLabel" parent="UI/Player2"]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 78.0
+offset_right = 233.0
+offset_bottom = 118.0
+theme = ExtResource("2_oau2t")
+bbcode_enabled = true
+text = "[wave amp=5.0 freq=2.0 connected=1]Player 2[/wave]"
+
+[node name="PlayerInput" type="LineEdit" parent="UI/Player2"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 530.0
+offset_right = 235.0
+offset_bottom = 573.0
+theme = ExtResource("2_oau2t")
+theme_override_font_sizes/font_size = 24
+placeholder_text = "Name..."
+alignment = 1
+
+[node name="Player3" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 555.0
+offset_right = 595.0
+offset_bottom = 40.0
+
+[node name="PlayerText" type="RichTextLabel" parent="UI/Player3"]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 78.0
+offset_right = 233.0
+offset_bottom = 118.0
+theme = ExtResource("2_oau2t")
+bbcode_enabled = true
+text = "[wave amp=5.0 freq=2.0 connected=1]Player 3[/wave]"
+
+[node name="PlayerInput" type="LineEdit" parent="UI/Player3"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 530.0
+offset_right = 235.0
+offset_bottom = 573.0
+theme = ExtResource("2_oau2t")
+theme_override_font_sizes/font_size = 24
+placeholder_text = "Name..."
+alignment = 1
+
+[node name="Player4" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 823.0
+offset_right = 863.0
+offset_bottom = 40.0
+
+[node name="PlayerText" type="RichTextLabel" parent="UI/Player4"]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 78.0
+offset_right = 233.0
+offset_bottom = 118.0
+theme = ExtResource("2_oau2t")
+bbcode_enabled = true
+text = "[wave amp=5.0 freq=2.0 connected=1]Player 4[/wave]"
+
+[node name="PlayerInput" type="LineEdit" parent="UI/Player4"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 530.0
+offset_right = 235.0
+offset_bottom = 573.0
+theme = ExtResource("2_oau2t")
+theme_override_font_sizes/font_size = 24
+placeholder_text = "Name..."
+alignment = 1
+
+[node name="nextButton" type="Button" parent="."]
+offset_left = 535.0
+offset_top = 601.0
+offset_right = 621.0
+offset_bottom = 634.0
+text = "next"
+
+[connection signal="pressed" from="nextButton" to="." method="_on_next_button_pressed"]
