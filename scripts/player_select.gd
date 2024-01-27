@@ -26,6 +26,7 @@ func _on_left_button_pressed():
 func _on_start_button_pressed():
 	var main = get_tree().root.get_child(0)
 	for i in playerNames.size():
-		main.players[[i]] = playerNames[i]
+		if playerNames[i] != "":
+			main.players.append([i,playerNames[i]])
 	main.loadScene(self,toScene)
 
