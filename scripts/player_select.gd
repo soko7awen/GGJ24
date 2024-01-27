@@ -3,11 +3,17 @@ extends Node2D
 @onready var players = get_node("UI/Players")
 @onready var camera = get_node("Camera")
 var toScene = "res://scenes/cutscenes/the_card_that_flips.tscn"
-var player = 1
+var playerNames = []
 
 func _process(delta):
-	for i in players.get_children():
-		print(i.get_child(1).text)
+	for i in players.get_children().size():
+		playerNames.insert(i,players.get_child(i).get_child(1).text)
+	if playerNames[0] and playerNames[1] and playerNames[2] and playerNames[3]:
+		$UI/startButton.disabled = false
+		$UI/startButton/startText.text = "[rainbow freq=0.25 sat=0.8 val=0.8]start[/rainbow]"
+	else:
+		$UI/startButton.disabled = true
+		$UI/startButton/startText.text = "[rainbow freq=0.25 sat=0.3 val=0.3]start[/rainbow]"
 
 func _on_right_button_pressed():
 	camera.position.x += 1152

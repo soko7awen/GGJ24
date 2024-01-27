@@ -112,6 +112,19 @@ offset_bottom = 639.0
 theme = ExtResource("2_oau2t")
 disabled = true
 
+[node name="startText" type="RichTextLabel" parent="UI/startButton"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = -1.0
+offset_right = 254.0
+offset_bottom = 64.0
+mouse_filter = 2
+theme = ExtResource("2_tl41j")
+theme_override_font_sizes/normal_font_size = 48
+bbcode_enabled = true
+text = "[rainbow freq=0.25 sat=0.5 val=0.6]start[/rainbow]"
+fit_content = true
+
 [node name="Players" type="Control" parent="UI"]
 anchors_preset = 0
 offset_right = 40.0
@@ -289,19 +302,6 @@ theme_override_font_sizes/font_size = 24
 placeholder_text = "Name..."
 alignment = 1
 max_length = 10
-
-[node name="startText" type="RichTextLabel" parent="UI"]
-layout_mode = 0
-offset_left = 442.0
-offset_top = 580.0
-offset_right = 690.0
-offset_bottom = 645.0
-mouse_filter = 2
-theme = ExtResource("2_tl41j")
-theme_override_font_sizes/normal_font_size = 48
-bbcode_enabled = true
-text = "[rainbow freq=0.25 sat=0.5 val=0.6]start[/rainbow]"
-fit_content = true
 
 [connection signal="pressed" from="UI/rightarrow/rightButton" to="." method="_on_right_button_pressed"]
 [connection signal="pressed" from="UI/leftarrow/leftButton" to="." method="_on_left_button_pressed"]
