@@ -1,10 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://cu5ctijee8k8r"]
+[gd_scene load_steps=7 format=3 uid="uid://cu5ctijee8k8r"]
 
 [ext_resource type="Script" path="res://scripts/title.gd" id="1_xop0o"]
 [ext_resource type="Texture2D" uid="uid://bg4ckbg38kh4c" path="res://assets/sprites/scrollingStar_01.png" id="2_7hh1k"]
 [ext_resource type="Script" path="res://scenes/scrolling.gd" id="3_fmaw2"]
+[ext_resource type="Texture2D" uid="uid://bk7opscjjinlk" path="res://assets/sprites/ui/button_start_black.png" id="4_t6bki"]
+[ext_resource type="Texture2D" uid="uid://cpwk852s6rdsn" path="res://assets/sprites/ui/button_blank_black.png" id="5_i8k4k"]
+[ext_resource type="Theme" uid="uid://biufirpv8wudy" path="res://assets/instruction_theme.tres" id="5_kuhgu"]
 
 [node name="Title" type="Node2D"]
+texture_filter = 1
 script = ExtResource("1_xop0o")
 
 [node name="UI" type="Control" parent="."]
@@ -32,22 +36,41 @@ offset_right = 602.0
 offset_bottom = 203.0
 text = "title"
 
+[node name="ButtonBlankBlack" type="Sprite2D" parent="UI"]
+position = Vector2(1077, 624)
+texture = ExtResource("5_i8k4k")
+
+[node name="startText" type="RichTextLabel" parent="UI"]
+offset_left = 1044.0
+offset_top = 614.0
+offset_right = 1292.0
+offset_bottom = 679.0
+theme = ExtResource("5_kuhgu")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "Quit"
+fit_content = true
+
 [node name="playButton" type="Button" parent="UI"]
 layout_mode = 0
-offset_left = 517.0
-offset_top = 227.0
-offset_right = 603.0
-offset_bottom = 279.0
-text = "go
-"
+offset_left = 439.0
+offset_top = 429.0
+offset_right = 697.0
+offset_bottom = 496.0
+flat = true
 
 [node name="quitButton" type="Button" parent="UI"]
 layout_mode = 0
-offset_left = 516.0
-offset_top = 332.0
-offset_right = 602.0
-offset_bottom = 384.0
-text = "stop"
+offset_left = 1013.0
+offset_top = 608.0
+offset_right = 1141.0
+offset_bottom = 640.0
+flat = true
+
+[node name="ButtonStartBlack" type="Sprite2D" parent="."]
+position = Vector2(568, 463)
+scale = Vector2(2, 2)
+texture = ExtResource("4_t6bki")
 
 [connection signal="pressed" from="UI/playButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="UI/quitButton" to="." method="_on_quit_button_pressed"]
