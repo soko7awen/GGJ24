@@ -1,16 +1,18 @@
 extends Node2D
-@onready var gameController = $".."
+@onready var main = get_tree().root.get_child(0)
 var toScene = "res://scenes/cutscenes/card_select.tscn"
-var colors = gameController.colorCipher
+@onready var colors = main.colorCipher
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var main = get_tree().root.get_child(0)
 	main.pickKing()
-	$CanvasLayer/Label.text = main.king[1]
-	$CanvasLayer/Label.set("theme_override_colors/font_color",colors[main.king[0]])
-	#main.loadScene(self,toScene)
+	$CanvasLayer/Control/Label.text = main.king[1]
+	$CanvasLayer/Control/Label.set("theme_override_colors/font_color",colors[main.king[0]])
+
+func _on_next_button_pressed():
+	main.loadScene(self,toScene)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+
