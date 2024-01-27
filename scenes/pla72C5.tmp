@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://7jftddgwah53"]
+[gd_scene load_steps=3 format=3 uid="uid://7jftddgwah53"]
 
 [ext_resource type="Script" path="res://scripts/playerselect.gd" id="1_uymep"]
 [ext_resource type="Theme" uid="uid://b5i2s2wgetsyw" path="res://assets/base_theme.tres" id="2_oau2t"]
-[ext_resource type="Theme" uid="uid://biufirpv8wudy" path="res://assets/instruction_theme.tres" id="2_tl41j"]
 
 [node name="Playerselect" type="Node2D"]
 script = ExtResource("1_uymep")
@@ -17,21 +16,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="nextarrow" type="RichTextLabel" parent="UI"]
-offset_left = 1108.0
-offset_top = 247.0
-offset_right = 1149.0
-offset_bottom = 391.0
-theme = ExtResource("2_tl41j")
-theme_override_font_sizes/normal_font_size = 48
-bbcode_enabled = true
-text = "[wave amp=50.0 freq=4.0 connected=1]
->
-[/wave]"
-fit_content = true
-
-[node name="optional" type="RichTextLabel" parent="UI"]
-layout_mode = 0
+[node name="addText2" type="RichTextLabel" parent="UI"]
 offset_left = 1259.0
 offset_top = -30.0
 offset_right = 1537.0
@@ -57,12 +42,12 @@ text = "
 fit_content = true
 
 [node name="nextButton" type="Button" parent="UI"]
-layout_mode = 0
-offset_left = 436.0
-offset_top = 581.0
-offset_right = 684.0
-offset_bottom = 639.0
-theme = ExtResource("2_oau2t")
+offset_left = 535.0
+offset_top = 601.0
+offset_right = 621.0
+offset_bottom = 634.0
+disabled = true
+text = "next"
 
 [node name="Players" type="Control" parent="UI"]
 anchors_preset = 0
@@ -95,7 +80,6 @@ theme = ExtResource("2_oau2t")
 theme_override_font_sizes/font_size = 24
 placeholder_text = "Name..."
 alignment = 1
-max_length = 10
 
 [node name="Player2" type="Control" parent="UI/Players"]
 layout_mode = 3
@@ -124,7 +108,6 @@ theme = ExtResource("2_oau2t")
 theme_override_font_sizes/font_size = 24
 placeholder_text = "Name..."
 alignment = 1
-max_length = 10
 
 [node name="Player3" type="Control" parent="UI/Players"]
 layout_mode = 3
@@ -153,7 +136,6 @@ theme = ExtResource("2_oau2t")
 theme_override_font_sizes/font_size = 24
 placeholder_text = "Name..."
 alignment = 1
-max_length = 10
 
 [node name="Player4" type="Control" parent="UI/Players"]
 layout_mode = 3
@@ -182,7 +164,6 @@ theme = ExtResource("2_oau2t")
 theme_override_font_sizes/font_size = 24
 placeholder_text = "Name..."
 alignment = 1
-max_length = 10
 
 [node name="Player5" type="Control" parent="UI/Players"]
 layout_mode = 3
@@ -211,7 +192,6 @@ theme = ExtResource("2_oau2t")
 theme_override_font_sizes/font_size = 24
 placeholder_text = "Name..."
 alignment = 1
-max_length = 10
 
 [node name="Player6" type="Control" parent="UI/Players"]
 layout_mode = 3
@@ -240,17 +220,5 @@ theme = ExtResource("2_oau2t")
 theme_override_font_sizes/font_size = 24
 placeholder_text = "Name..."
 alignment = 1
-max_length = 10
-
-[node name="startText" type="RichTextLabel" parent="UI"]
-offset_left = 442.0
-offset_top = 580.0
-offset_right = 690.0
-offset_bottom = 645.0
-theme = ExtResource("2_tl41j")
-theme_override_font_sizes/normal_font_size = 48
-bbcode_enabled = true
-text = "[rainbow freq=0.25 sat=0.5 val=0.6]start[/rainbow]"
-fit_content = true
 
 [connection signal="pressed" from="UI/nextButton" to="." method="_on_next_button_pressed"]
