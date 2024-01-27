@@ -22,6 +22,7 @@ scale = Vector2(2, 2)
 texture = ExtResource("2_7hh1k")
 stretch_mode = 1
 script = ExtResource("3_fmaw2")
+SPEED = null
 
 [node name="RichTextLabel" type="RichTextLabel" parent="UI"]
 layout_mode = 0

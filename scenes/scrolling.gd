@@ -7,5 +7,5 @@ func _process(delta):
 	position.x += (direction * SPEED) * delta
 	position.y += (direction * SPEED) * delta
 	
-	if(position.x >= -1 or position.y >= -1):
-		position = Vector2(-1500, -1500)
+	if((direction > 0 and (position.x >= 10 or position.y >= 10)) or (direction < 0 and (position.x >= 4000 or position.y >= 3000))):
+		direction = -direction
