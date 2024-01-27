@@ -1,7 +1,42 @@
-[gd_scene format=3 uid="uid://f0p37o2dpe1x"]
+[gd_scene load_steps=4 format=3 uid="uid://f0p37o2dpe1x"]
+
+[ext_resource type="Script" path="res://scripts/minigame.gd" id="1_dvs3w"]
+[ext_resource type="Script" path="res://scripts/punchline.gd" id="1_qwemb"]
+[ext_resource type="Theme" uid="uid://biufirpv8wudy" path="res://assets/instruction_theme.tres" id="3_mmoku"]
 
 [node name="Punchline" type="Node2D"]
+script = ExtResource("1_qwemb")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 1151.0
+offset_bottom = 649.0
+color = Color(0, 0, 0, 1)
+
+[node name="MinigameController" type="Node2D" parent="."]
+script = ExtResource("1_dvs3w")
+
+[node name="startText2" type="RichTextLabel" parent="."]
+offset_left = 886.0
+offset_top = 894.0
+offset_right = 1134.0
+offset_bottom = 959.0
+mouse_filter = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("3_mmoku")
+theme_override_font_sizes/normal_font_size = 48
+bbcode_enabled = true
+text = "Player"
+fit_content = true
+
+[node name="startText" type="RichTextLabel" parent="."]
+offset_left = 443.0
+offset_top = 447.0
+offset_right = 691.0
+offset_bottom = 512.0
+mouse_filter = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("3_mmoku")
+theme_override_font_sizes/normal_font_size = 48
+bbcode_enabled = true
+text = "[rainbow freq=0.25 sat=0.3 val=0.3]start[/rainbow]"
+fit_content = true
