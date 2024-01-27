@@ -9,9 +9,12 @@
 [node name="Playerselect" type="Node2D"]
 script = ExtResource("1_uymep")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2(576, 0)
+ignore_rotation = false
 limit_left = 0
 limit_top = 0
+position_smoothing_enabled = true
 
 [node name="UI" type="Control" parent="."]
 texture_filter = 1
@@ -24,14 +27,14 @@ offset_bottom = 40.0
 layout_mode = 0
 offset_left = -4000.0
 offset_top = -3000.0
-offset_right = -941.0
-offset_bottom = -832.0
+offset_right = -674.0
+offset_bottom = -652.0
 scale = Vector2(2, 2)
 texture = ExtResource("2_brsje")
 stretch_mode = 1
 script = ExtResource("3_ekvke")
 
-[node name="nextarrow" type="RichTextLabel" parent="UI"]
+[node name="rightarrow" type="RichTextLabel" parent="UI"]
 layout_mode = 0
 offset_left = 1108.0
 offset_top = 247.0
@@ -45,11 +48,31 @@ text = "[wave amp=50.0 freq=4.0 connected=1]
 [/wave]"
 fit_content = true
 
-[node name="Button" type="Button" parent="UI/nextarrow"]
+[node name="rightButton" type="Button" parent="UI/rightarrow"]
 layout_mode = 0
-offset_left = -6.0
+offset_left = -8.0
 offset_top = 48.0
-offset_right = 44.0
+offset_right = 42.0
+offset_bottom = 113.0
+flat = true
+
+[node name="leftarrow" type="RichTextLabel" parent="UI"]
+offset_left = 1153.0
+offset_top = 247.0
+offset_right = 1194.0
+offset_bottom = 391.0
+theme = ExtResource("2_tl41j")
+theme_override_font_sizes/normal_font_size = 48
+bbcode_enabled = true
+text = "[wave amp=50.0 freq=4.0 connected=1]
+<
+[/wave]"
+fit_content = true
+
+[node name="leftButton" type="Button" parent="UI/leftarrow"]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 50.0
 offset_bottom = 113.0
 flat = true
 
@@ -277,4 +300,6 @@ bbcode_enabled = true
 text = "[rainbow freq=0.25 sat=0.5 val=0.6]start[/rainbow]"
 fit_content = true
 
+[connection signal="pressed" from="UI/rightarrow/rightButton" to="." method="_on_right_button_pressed"]
+[connection signal="pressed" from="UI/leftarrow/leftButton" to="." method="_on_left_button_pressed"]
 [connection signal="pressed" from="UI/startButton" to="." method="_on_start_button_pressed"]
