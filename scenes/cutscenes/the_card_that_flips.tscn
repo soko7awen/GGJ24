@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cleg57562wiio"]
 
-[ext_resource type="Script" path="res://scenes/cutscenes/the_card_that_flips.gd" id="1_4gl2l"]
+[ext_resource type="Script" path="res://scripts/the_card_that_flips.gd" id="1_4gl2l"]
 
 [node name="TheCardThatFlips" type="Node2D"]
 script = ExtResource("1_4gl2l")
