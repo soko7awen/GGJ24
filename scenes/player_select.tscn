@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/player_select.gd" id="1_uymep"]
 [ext_resource type="Texture2D" uid="uid://bg4ckbg38kh4c" path="res://assets/sprites/scrollingStar_01.png" id="2_brsje"]
-[ext_resource type="Theme" uid="uid://b5i2s2wgetsyw" path="res://assets/base_theme.tres" id="2_oau2t"]
+[ext_resource type="Theme" path="res://assets/base_theme.tres" id="2_oau2t"]
 [ext_resource type="Theme" uid="uid://biufirpv8wudy" path="res://assets/instruction_theme.tres" id="2_tl41j"]
 [ext_resource type="Script" path="res://scenes/scrolling.gd" id="3_ekvke"]
 
@@ -109,6 +109,7 @@ offset_top = 581.0
 offset_right = 684.0
 offset_bottom = 639.0
 theme = ExtResource("2_oau2t")
+disabled = true
 
 [node name="Players" type="Control" parent="UI"]
 anchors_preset = 0
@@ -294,6 +295,7 @@ offset_left = 442.0
 offset_top = 580.0
 offset_right = 690.0
 offset_bottom = 645.0
+mouse_filter = 2
 theme = ExtResource("2_tl41j")
 theme_override_font_sizes/normal_font_size = 48
 bbcode_enabled = true
