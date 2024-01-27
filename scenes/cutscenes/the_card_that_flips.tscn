@@ -3,4 +3,5 @@
 [ext_resource type="Script" path="res://scripts/the_card_that_flips.gd" id="1_4gl2l"]
 
 [node name="TheCardThatFlips" type="Node2D"]
+texture_filter = 1
 script = ExtResource("1_4gl2l")
