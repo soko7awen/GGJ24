@@ -1,5 +1,5 @@
 extends Node
-var toScene = "res://scenes/playerselect.tscn"
+var toScene = "res://scenes/player_select.tscn"
 
 func _on_start_button_pressed():
 	$"..".loadScene(toScene)
