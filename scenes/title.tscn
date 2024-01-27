@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://cu5ctijee8k8r"]
+[gd_scene load_steps=9 format=3 uid="uid://cu5ctijee8k8r"]
 
 [ext_resource type="Script" path="res://scripts/title.gd" id="1_xop0o"]
 [ext_resource type="Texture2D" uid="uid://bg4ckbg38kh4c" path="res://assets/sprites/scrollingStar_01.png" id="2_7hh1k"]
 [ext_resource type="Script" path="res://scripts/scrolling.gd" id="3_fmaw2"]
-[ext_resource type="Texture2D" uid="uid://bk7opscjjinlk" path="res://assets/sprites/ui/button_start_black.png" id="4_t6bki"]
-[ext_resource type="Texture2D" uid="uid://cpwk852s6rdsn" path="res://assets/sprites/ui/button_blank_black.png" id="5_i8k4k"]
+[ext_resource type="Texture2D" uid="uid://burr4j6nmi7ir" path="res://assets/sprites/ui/button_start_black.png" id="4_t6bki"]
 [ext_resource type="Theme" uid="uid://biufirpv8wudy" path="res://assets/instruction_theme.tres" id="5_kuhgu"]
-[ext_resource type="Texture2D" uid="uid://cj7jjhry6ru8l" path="res://assets/sprites/ui/button_start_black_pressed.png" id="7_om3o3"]
+[ext_resource type="Texture2D" uid="uid://bggxm63krjlq" path="res://assets/sprites/ui/button_blank_white.png" id="6_wo2a1"]
+[ext_resource type="Texture2D" uid="uid://drkt6yypy43m4" path="res://assets/sprites/ui/button_blank_white_pressed.png" id="7_natb4"]
+[ext_resource type="Texture2D" uid="uid://cuhuqdog8w5st" path="res://assets/sprites/ui/button_start_black_pressed.png" id="7_om3o3"]
 
 [node name="Title" type="Node2D"]
 texture_filter = 1
@@ -57,7 +58,8 @@ offset_right = 1141.0
 offset_bottom = 640.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
-texture_normal = ExtResource("5_i8k4k")
+texture_normal = ExtResource("6_wo2a1")
+texture_pressed = ExtResource("7_natb4")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="UI/quitButton"]
 layout_mode = 0
@@ -67,6 +69,7 @@ offset_right = 96.0
 offset_bottom = 29.0
 mouse_filter = 2
 theme = ExtResource("5_kuhgu")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
 text = "[shake rate=10.0 level=5 connected=1]Quit[/shake]"
