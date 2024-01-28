@@ -7,7 +7,6 @@ func _ready():
 
 func fill_texts():
 	$CanvasLayer/Control/Container/Prompt.text = "[center]" + main.prompt + "[/center]"
-	$CanvasLayer/Control/Jking.texture = load("res://assets/sprites/judgement/Jkings/Jking_"+main.colorNameCipher[main.king[0]]+".png")
 	for i in main.lastResponses.size():
 		var response = main.lastResponses[i]
 		if i <= 2:

@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bocxgyoq20thb"]
+[gd_scene load_steps=6 format=3 uid="uid://bocxgyoq20thb"]
 
 [ext_resource type="Script" path="res://scripts/judgement.gd" id="1_k6qhw"]
 [ext_resource type="Theme" uid="uid://biufirpv8wudy" path="res://assets/instruction_theme.tres" id="2_g6acc"]
-[ext_resource type="Texture2D" uid="uid://bv8k0xqajxu5x" path="res://assets/sprites/judgement/blank_background.png" id="2_o1651"]
 [ext_resource type="Theme" uid="uid://b5i2s2wgetsyw" path="res://assets/base_theme.tres" id="3_w8bey"]
+[ext_resource type="Texture2D" uid="uid://bg4ckbg38kh4c" path="res://assets/sprites/scrollingStar_01.png" id="4_tibg1"]
+[ext_resource type="Script" path="res://scripts/scrolling.gd" id="5_g6km5"]
 
 [node name="Judgement" type="Node2D"]
 script = ExtResource("1_k6qhw")
@@ -19,15 +20,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
+[node name="Background" type="TextureRect" parent="CanvasLayer/Control"]
 z_index = -1
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_o1651")
+offset_left = -4000.0
+offset_top = -3000.0
+offset_right = -674.0
+offset_bottom = -652.0
+scale = Vector2(2, 2)
+texture = ExtResource("4_tibg1")
+stretch_mode = 1
+script = ExtResource("5_g6km5")
 
 [node name="Container" type="Control" parent="CanvasLayer/Control"]
 layout_mode = 1
@@ -46,12 +48,13 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -64.0
+offset_top = -114.0
+offset_bottom = 14.0003
 grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("2_g6acc")
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 32
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 64
 bbcode_enabled = true
 fit_content = true
 
@@ -234,7 +237,3 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_default_cursor_shape = 1
 flat = true
-
-[node name="Jking" type="Sprite2D" parent="CanvasLayer/Control"]
-position = Vector2(1045, 207)
-scale = Vector2(1.5, 1.5)
