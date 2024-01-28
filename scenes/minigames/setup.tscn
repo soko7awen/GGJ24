@@ -1,0 +1,158 @@
+[gd_scene load_steps=10 format=3 uid="uid://drp4yucappajn"]
+
+[ext_resource type="Script" path="res://scripts/minigame.gd" id="1_fdfpt"]
+[ext_resource type="Texture2D" uid="uid://cxq4rjjdufbyc" path="res://assets/sprites/grey-and-white-checkerboard-pattern_thumb.jpg" id="2_4tcy7"]
+[ext_resource type="Script" path="res://scripts/scrolling.gd" id="3_4b4pm"]
+[ext_resource type="Theme" uid="uid://biufirpv8wudy" path="res://assets/instruction_theme.tres" id="4_ypedy"]
+[ext_resource type="Theme" uid="uid://b5i2s2wgetsyw" path="res://assets/base_theme.tres" id="5_3uprv"]
+[ext_resource type="Texture2D" uid="uid://cpwk852s6rdsn" path="res://assets/sprites/ui/button_blank_black.png" id="6_36y1t"]
+[ext_resource type="Texture2D" uid="uid://cx5uvxekqmydp" path="res://assets/sprites/ui/button_blank_black_pressed.png" id="7_xchak"]
+[ext_resource type="Texture2D" uid="uid://bk7opscjjinlk" path="res://assets/sprites/ui/button_start_black.png" id="8_td6l6"]
+[ext_resource type="Texture2D" uid="uid://cj7jjhry6ru8l" path="res://assets/sprites/ui/button_start_black_pressed.png" id="9_j57it"]
+
+[node name="Setup" type="Node2D"]
+texture_filter = 1
+
+[node name="MinigameController" type="Node2D" parent="."]
+script = ExtResource("1_fdfpt")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_left = 0
+limit_top = 0
+position_smoothing_enabled = true
+position_smoothing_speed = 6.0
+
+[node name="BottomUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Background" type="TextureRect" parent="BottomUI"]
+self_modulate = Color(0.478431, 0.478431, 0.478431, 1)
+layout_mode = 0
+offset_left = -4000.0
+offset_top = -3000.0
+offset_right = -674.0
+offset_bottom = -652.0
+scale = Vector2(2, 2)
+texture = ExtResource("2_4tcy7")
+stretch_mode = 1
+script = ExtResource("3_4b4pm")
+
+[node name="nameText" type="RichTextLabel" parent="BottomUI"]
+layout_mode = 0
+offset_top = 732.0
+offset_right = 1152.0
+offset_bottom = 889.0
+mouse_filter = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("4_ypedy")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[center]joke[/center]"
+
+[node name="nameText2" type="RichTextLabel" parent="BottomUI"]
+layout_mode = 0
+offset_top = 708.0
+offset_right = 1152.0
+offset_bottom = 741.0
+mouse_filter = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("5_3uprv")
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[center]the joke is...[/center]"
+fit_content = true
+
+[node name="input" type="TextEdit" parent="BottomUI"]
+layout_mode = 0
+offset_left = 198.0
+offset_top = 889.0
+offset_right = 950.0
+offset_bottom = 1102.0
+mouse_filter = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("4_ypedy")
+wrap_mode = 1
+caret_blink = true
+
+[node name="finishButton" type="TextureButton" parent="BottomUI"]
+layout_mode = 0
+offset_left = 436.0
+offset_top = 1120.0
+offset_right = 564.0
+offset_bottom = 1160.0
+scale = Vector2(2, 2)
+focus_mode = 1
+texture_normal = ExtResource("6_36y1t")
+texture_pressed = ExtResource("7_xchak")
+
+[node name="helpText" type="RichTextLabel" parent="BottomUI/finishButton"]
+layout_mode = 0
+offset_left = 15.5
+offset_top = 7.0
+offset_right = 115.5
+offset_bottom = 28.0
+mouse_filter = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("4_ypedy")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "[pulse freq=0.4 color=#000000 ease=-1.0]finish"
+fit_content = true
+
+[node name="TopUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Background" type="ColorRect" parent="TopUI"]
+self_modulate = Color(0.458824, 0.458824, 0.458824, 1)
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="nameText" type="RichTextLabel" parent="TopUI"]
+layout_mode = 0
+offset_left = 420.0
+offset_top = 61.0
+offset_right = 717.0
+offset_bottom = 157.0
+mouse_filter = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("4_ypedy")
+theme_override_font_sizes/normal_font_size = 48
+bbcode_enabled = true
+text = "[center]Player 1[/center]"
+fit_content = true
+
+[node name="instructions" type="RichTextLabel" parent="TopUI"]
+layout_mode = 0
+offset_left = 334.0
+offset_top = 207.0
+offset_right = 838.0
+offset_bottom = 396.0
+mouse_filter = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("4_ypedy")
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "You are given the punchline of a joke, but not the setup. Finish the joke in a way that would make the king laugh."
+fit_content = true
+
+[node name="startButton" type="TextureButton" parent="TopUI"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 436.0
+offset_top = 460.0
+offset_right = 564.0
+offset_bottom = 502.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("8_td6l6")
+texture_pressed = ExtResource("9_j57it")
+
+[connection signal="pressed" from="BottomUI/finishButton" to="MinigameController" method="_on_finish_button_pressed"]
+[connection signal="pressed" from="TopUI/startButton" to="MinigameController" method="_on_start_button_pressed"]
