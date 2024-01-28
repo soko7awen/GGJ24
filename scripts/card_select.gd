@@ -1,12 +1,12 @@
 extends Node2D
 @onready var gameController = $".."
-var nextMinigame = randi_range(1,1)
+var nextMinigame = randi_range(1,4)
 var tarotSprite
 var toScene
 
 func _ready():
 	while(nextMinigame == gameController.lastMinigame):
-		nextMinigame = randi_range(1,5)
+		nextMinigame = randi_range(1,4)
 	match nextMinigame:
 		1:
 			# punchline picker !
@@ -22,7 +22,7 @@ func _ready():
 			toScene = "res://scenes/minigames/freewrite.tscn"
 		4:
 			#whose line is it anyway! continuous
-			tarotSprite = "" #soon
+			tarotSprite = "res://assets/sprites/cards/tarot_kinggambit.png"
 			toScene = "res://scenes/minigames/whatever.tscn"
 	gameController.lastMinigame = nextMinigame
 

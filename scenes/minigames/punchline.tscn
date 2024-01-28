@@ -75,6 +75,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 2
 theme = ExtResource("3_mmoku")
 wrap_mode = 1
+caret_blink = true
 
 [node name="finishButton" type="TextureButton" parent="BottomUI"]
 layout_mode = 0
