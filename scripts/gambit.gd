@@ -30,8 +30,11 @@ func _on_finish_button_pressed():
 		responses.append([int(player), input.text])
 		$TopUI/instructions.text = "You are given input from the King and must continue the story/plot/whatever. The best contribution will be chosen by the King. Max 32 characters."
 		$BottomUI/nameText2.text = "[center]"+ $BottomUI/nameText2.text + input.text + " [/center]"
+	print(player)
 	player += 1
+	print(player)
 	checkIfKing()
+	print(player)
 	if(player >= main.players.size()):
 		main.lastResponses = responses
 		main.loadScene(self,toScene)
