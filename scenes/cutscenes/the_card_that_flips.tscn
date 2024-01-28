@@ -1,27 +1,41 @@
-[gd_scene load_steps=9 format=3 uid="uid://cleg57562wiio"]
+[gd_scene load_steps=12 format=3 uid="uid://cleg57562wiio"]
 
 [ext_resource type="Script" path="res://scripts/the_card_that_flips.gd" id="1_4gl2l"]
 [ext_resource type="Theme" path="res://assets/base_theme.tres" id="2_27ksd"]
+[ext_resource type="Texture2D" uid="uid://bg4ckbg38kh4c" path="res://assets/sprites/scrollingStar_01.png" id="2_aje63"]
 [ext_resource type="Texture2D" uid="uid://cx5uvxekqmydp" path="res://assets/sprites/ui/button_blank_black_pressed.png" id="3_0g71q"]
 [ext_resource type="Texture2D" uid="uid://bwbii0f35526c" path="res://assets/sprites/ui/button_blank_black.png" id="3_4rnv7"]
+[ext_resource type="Script" path="res://scripts/scrolling.gd" id="3_vs4bm"]
 [ext_resource type="Texture2D" uid="uid://b8rr5lua56q83" path="res://assets/sprites/cards/tarot_back.png" id="5_l8vcs"]
 
-[sub_resource type="Animation" id="Animation_qj1rq"]
-resource_name = "Card Flip"
+[sub_resource type="Animation" id="Animation_ju1t2"]
+resource_name = "Flip"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("TextureRect:scale")
+tracks/0/path = NodePath(".:flipped")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(1.5, 1.5), Vector2(0, 1.5)]
 }
 
-[sub_resource type="Animation" id="Animation_e7pm5"]
+[sub_resource type="Animation" id="Animation_7c31e"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -35,39 +49,94 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(1.5, 1.5)]
 }
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_cvitd"]
-_data = {
-"Card Flip": SubResource("Animation_qj1rq"),
-"RESET": SubResource("Animation_e7pm5")
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(458, 134)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
 }
 
-[node name="TheCardThatFlips" type="Control"]
+[sub_resource type="Animation" id="Animation_o0osy"]
+resource_name = "Unflip"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 1.5), Vector2(1.5, 1.5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 1), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_amggh"]
+_data = {
+"Flip": SubResource("Animation_ju1t2"),
+"RESET": SubResource("Animation_7c31e"),
+"Unflip": SubResource("Animation_o0osy")
+}
+
+[node name="TheCardThatFlips" type="Node2D"]
 texture_filter = 1
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 script = ExtResource("1_4gl2l")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_cvitd")
+"": SubResource("AnimationLibrary_amggh")
 }
 
+[node name="Background" type="TextureRect" parent="."]
+offset_left = -4000.0
+offset_top = -3000.0
+offset_right = -941.0
+offset_bottom = -832.0
+scale = Vector2(2, 2)
+texture = ExtResource("2_aje63")
+stretch_mode = 1
+script = ExtResource("3_vs4bm")
+
 [node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -100.0
-offset_top = -184.0
-offset_right = 44.0
-offset_bottom = 56.0
+offset_left = 458.0
+offset_top = 134.0
+offset_right = 602.0
+offset_bottom = 374.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.5, 1.5)
@@ -75,31 +144,29 @@ texture = ExtResource("5_l8vcs")
 
 [node name="Label" type="Label" parent="."]
 visible = false
-layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -33.0
-offset_top = -16.5
-offset_right = 33.0
-offset_bottom = 16.5
+offset_left = 469.0
+offset_top = 466.0
+offset_right = 667.0
+offset_bottom = 499.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_27ksd")
 
 [node name="NextButton" type="TextureButton" parent="."]
-layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -274.0
-offset_top = -84.0
-offset_right = -146.0
-offset_bottom = -52.0
+offset_left = 874.0
+offset_top = 564.0
+offset_right = 1002.0
+offset_bottom = 596.0
 grow_horizontal = 0
 grow_vertical = 0
 scale = Vector2(2, 2)
@@ -121,3 +188,5 @@ theme = ExtResource("2_27ksd")
 theme_override_font_sizes/normal_font_size = 26
 text = "Next"
 fit_content = true
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
