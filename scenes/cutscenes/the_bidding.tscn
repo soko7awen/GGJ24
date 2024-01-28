@@ -90,7 +90,7 @@ texture = ExtResource("7_jpkby")
 position = Vector2(210, 6.25)
 scale = Vector2(0.416667, 0.416667)
 
-[node name="ArrowLargeWhite" type="Sprite2D" parent="."]
+[node name="Arrow" type="Sprite2D" parent="."]
 position = Vector2(94, 346)
 rotation = 4.71239
 scale = Vector2(2, 2)

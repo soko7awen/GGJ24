@@ -17,8 +17,9 @@ func _process(delta):
 		arrowPos += 1
 	if arrowPos >= main.players.size():
 		arrowPos = 0
+	if arrowPos <= main.players.size()-1:
+		arrowPos = main.players.size()-1
 	arrow.position = $Jesters.get_child(arrowPos).get_child(0).position
 	if Input.is_action_just_pressed("submit"):
-		#main.score[player[0]] += 1
-		#main.king = main.players[player[0]]
-		pass
+		main.score[main.players[arrowPos][0]] += 1
+		main.king = main.players[arrowPos]
