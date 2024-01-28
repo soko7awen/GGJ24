@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://byqj014bllr6f"]
+
+[ext_resource type="Texture2D" uid="uid://c8rxsppwnh2mu" path="res://assets/sprites/win/win_bg_red.png" id="1_dlihd"]
+[ext_resource type="Texture2D" uid="uid://il1tnqpf26fu" path="res://assets/sprites/win/win_confetti.png" id="1_kc7gq"]
+[ext_resource type="Script" path="res://scripts/scrolling.gd" id="2_3cctk"]
+
+[node name="winscreen" type="Node2D"]
+texture_filter = 1
+
+[node name="WinBgRed" type="Sprite2D" parent="."]
+position = Vector2(576, 332)
+scale = Vector2(2.45, 2.45)
+texture = ExtResource("1_dlihd")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -4000.0
+offset_top = -3000.0
+offset_right = 7248.0
+offset_bottom = 5314.0
+scale = Vector2(3, 3)
+texture = ExtResource("1_kc7gq")
+stretch_mode = 1
+script = ExtResource("2_3cctk")
+SPEED = 100
