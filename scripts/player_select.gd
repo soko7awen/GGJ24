@@ -5,7 +5,7 @@ extends Node2D
 var toScene = "res://scenes/cutscenes/the_card_that_flips.tscn"
 var playerNames = ["","","","","",""]
 
-func _process(delta):
+func _process(_delta):
 	var playerCount = 0
 	for i in players.get_children().size():
 		var playerName = players.get_child(i).get_child(2).text
