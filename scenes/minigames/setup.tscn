@@ -1,15 +1,16 @@
-[gd_scene load_steps=11 format=3 uid="uid://drp4yucappajn"]
+[gd_scene load_steps=12 format=3 uid="uid://drp4yucappajn"]
 
 [ext_resource type="Script" path="res://scripts/minigame.gd" id="1_fdfpt"]
 [ext_resource type="Script" path="res://scripts/setup.gd" id="1_nji73"]
 [ext_resource type="Texture2D" uid="uid://cxq4rjjdufbyc" path="res://assets/sprites/grey-and-white-checkerboard-pattern_thumb.jpg" id="2_4tcy7"]
 [ext_resource type="Script" path="res://scripts/scrolling.gd" id="3_4b4pm"]
 [ext_resource type="Theme" uid="uid://biufirpv8wudy" path="res://assets/instruction_theme.tres" id="4_ypedy"]
-[ext_resource type="Theme" path="res://assets/base_theme.tres" id="5_3uprv"]
-[ext_resource type="Texture2D" uid="uid://bwbii0f35526c" path="res://assets/sprites/ui/button_blank_black.png" id="6_36y1t"]
+[ext_resource type="Theme" uid="uid://b5i2s2wgetsyw" path="res://assets/base_theme.tres" id="5_3uprv"]
+[ext_resource type="Texture2D" uid="uid://cpwk852s6rdsn" path="res://assets/sprites/ui/button_blank_black.png" id="6_36y1t"]
 [ext_resource type="Texture2D" uid="uid://cx5uvxekqmydp" path="res://assets/sprites/ui/button_blank_black_pressed.png" id="7_xchak"]
-[ext_resource type="Texture2D" uid="uid://burr4j6nmi7ir" path="res://assets/sprites/ui/button_start_black.png" id="8_td6l6"]
-[ext_resource type="Texture2D" uid="uid://cuhuqdog8w5st" path="res://assets/sprites/ui/button_start_black_pressed.png" id="9_j57it"]
+[ext_resource type="Texture2D" uid="uid://bk7opscjjinlk" path="res://assets/sprites/ui/button_start_black.png" id="8_td6l6"]
+[ext_resource type="Texture2D" uid="uid://cj7jjhry6ru8l" path="res://assets/sprites/ui/button_start_black_pressed.png" id="9_j57it"]
+[ext_resource type="Texture2D" uid="uid://cgiqyuowskg8k" path="res://assets/sprites/freewrite/fw_jester_red1.png" id="11_p5ybf"]
 
 [node name="Setup" type="Node2D"]
 texture_filter = 1
@@ -45,7 +46,7 @@ script = ExtResource("3_4b4pm")
 [node name="nameText" type="RichTextLabel" parent="BottomUI"]
 layout_mode = 0
 offset_top = 708.0
-offset_right = 1152.0
+offset_right = 589.0
 offset_bottom = 741.0
 mouse_filter = 2
 mouse_default_cursor_shape = 2
@@ -57,22 +58,20 @@ fit_content = true
 
 [node name="nameText2" type="RichTextLabel" parent="BottomUI"]
 layout_mode = 0
-offset_left = 50.0
 offset_top = 732.0
-offset_right = 1102.0
+offset_right = 589.0
 offset_bottom = 889.0
 mouse_filter = 2
 mouse_default_cursor_shape = 2
 theme = ExtResource("4_ypedy")
-theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
 text = "[center][/center]"
 
 [node name="input" type="TextEdit" parent="BottomUI"]
 layout_mode = 0
-offset_left = 198.0
 offset_top = 889.0
-offset_right = 950.0
+offset_right = 589.0
 offset_bottom = 1102.0
 mouse_filter = 2
 mouse_default_cursor_shape = 2
@@ -82,10 +81,10 @@ caret_blink = true
 
 [node name="finishButton" type="TextureButton" parent="BottomUI"]
 layout_mode = 0
-offset_left = 436.0
-offset_top = 1120.0
-offset_right = 564.0
-offset_bottom = 1160.0
+offset_left = 187.0
+offset_top = 1119.0
+offset_right = 315.0
+offset_bottom = 1159.0
 scale = Vector2(2, 2)
 focus_mode = 1
 texture_normal = ExtResource("6_36y1t")
@@ -156,6 +155,11 @@ offset_bottom = 502.0
 scale = Vector2(2, 2)
 texture_normal = ExtResource("8_td6l6")
 texture_pressed = ExtResource("9_j57it")
+
+[node name="jester" type="Sprite2D" parent="."]
+position = Vector2(868, 926)
+scale = Vector2(2, 2)
+texture = ExtResource("11_p5ybf")
 
 [connection signal="pressed" from="BottomUI/finishButton" to="MinigameController" method="_on_finish_button_pressed"]
 [connection signal="pressed" from="TopUI/startButton" to="MinigameController" method="_on_start_button_pressed"]
