@@ -41,8 +41,9 @@ script = ExtResource("4_y81i0")
 
 [node name="nameText" type="RichTextLabel" parent="BottomUI"]
 layout_mode = 0
+offset_left = 34.0
 offset_top = 708.0
-offset_right = 467.0
+offset_right = 582.0
 offset_bottom = 741.0
 mouse_filter = 2
 mouse_default_cursor_shape = 2
@@ -54,8 +55,9 @@ fit_content = true
 
 [node name="nameText2" type="RichTextLabel" parent="BottomUI"]
 layout_mode = 0
+offset_left = 34.0
 offset_top = 732.0
-offset_right = 467.0
+offset_right = 582.0
 offset_bottom = 955.0
 mouse_filter = 2
 mouse_default_cursor_shape = 2
@@ -66,8 +68,9 @@ text = "[center]...up to you, my Liege.[/center]"
 
 [node name="input" type="LineEdit" parent="BottomUI"]
 layout_mode = 0
+offset_left = 34.0
 offset_top = 955.0
-offset_right = 467.0
+offset_right = 582.0
 offset_bottom = 1004.0
 mouse_filter = 2
 mouse_default_cursor_shape = 2
@@ -77,10 +80,10 @@ caret_blink = true
 
 [node name="finishButton" type="TextureButton" parent="BottomUI"]
 layout_mode = 0
-offset_left = 114.0
-offset_top = 1050.0
-offset_right = 242.0
-offset_bottom = 1090.0
+offset_left = 200.0
+offset_top = 1064.0
+offset_right = 328.0
+offset_bottom = 1104.0
 scale = Vector2(2, 2)
 focus_mode = 1
 texture_normal = ExtResource("7_qt2hx")

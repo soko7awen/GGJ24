@@ -13,7 +13,7 @@ func _ready():
 func setTransition(nextPlayer):
 	$"../TopUI/Background".color = main.colorCipher[main.players[nextPlayer][0]]
 	$"../TopUI/nameText".text = "[center]" + main.players[nextPlayer][1] + "[/center]"
-	$"../jester".texture = load("res://assets/sprites/freewrite/fw_jester_"+main.colorNameCipher[main.king[0]]+"1.png")
+	$"../jester".texture = load("res://assets/sprites/freewrite/fw_jester_"+main.colorNameCipher[nextPlayer]+"1.png")
 
 func _on_start_button_pressed():
 	$"../Camera2D".position.y += 972
