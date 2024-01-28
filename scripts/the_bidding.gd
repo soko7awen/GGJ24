@@ -7,7 +7,8 @@ var lanes = []
 
 func _ready():
 	for i in main.players:
-		$Jesters.get_child(i[0]).visible = true
+		if(i[0] != main.king[0]):
+			$Jesters.get_child(i[0]).visible = true
 	$king.texture = load("res://assets/sprites/judgement/Jkings/Jking_"+main.colorNameCipher[main.king[0]]+".png")
 
 func _process(delta):

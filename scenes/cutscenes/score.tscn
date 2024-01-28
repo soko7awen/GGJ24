@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://dd74hvdq1mrl8"]
 
 [ext_resource type="Texture2D" uid="uid://bg4ckbg38kh4c" path="res://assets/sprites/scrollingStar_01.png" id="1_c08uw"]
-[ext_resource type="Script" path="res://scenes/cutscenes/score.gd" id="1_drelj"]
+[ext_resource type="Script" path="res://scripts/score.gd" id="1_drelj"]
 [ext_resource type="Script" path="res://scripts/scrolling.gd" id="2_yp5ua"]
 [ext_resource type="Texture2D" uid="uid://dewvfcb8iitpo" path="res://assets/sprites/jesters/icons/jester_icon_red.png" id="3_5y210"]
 [ext_resource type="Texture2D" uid="uid://bljllibjr5xp1" path="res://assets/sprites/jesters/icons/jester_icon_blue.png" id="4_hdmyy"]
@@ -28,35 +28,35 @@ script = ExtResource("2_yp5ua")
 [node name="Jesters" type="Node2D" parent="."]
 
 [node name="JesterIconRed" type="Sprite2D" parent="Jesters"]
-position = Vector2(191, 300)
+position = Vector2(190, 300)
 scale = Vector2(2, 2)
 texture = ExtResource("3_5y210")
 
 [node name="JesterIconRed2" type="Sprite2D" parent="Jesters"]
-position = Vector2(341, 300)
+position = Vector2(340, 300)
 scale = Vector2(2, 2)
 texture = ExtResource("4_hdmyy")
 
 [node name="JesterIconRed3" type="Sprite2D" parent="Jesters"]
-position = Vector2(491, 300)
+position = Vector2(490, 300)
 scale = Vector2(2, 2)
 texture = ExtResource("5_hbx1y")
 
 [node name="JesterIconRed4" type="Sprite2D" parent="Jesters"]
-position = Vector2(641, 300)
+position = Vector2(640, 300)
 scale = Vector2(2, 2)
 texture = ExtResource("6_rle15")
 
 [node name="JesterIconRed5" type="Sprite2D" parent="Jesters"]
-position = Vector2(791, 300)
+position = Vector2(790, 300)
 scale = Vector2(2, 2)
 texture = ExtResource("7_1dm4k")
 
 [node name="JesterIconRed6" type="Sprite2D" parent="Jesters"]
-position = Vector2(941, 300)
+position = Vector2(940, 300)
 scale = Vector2(2, 2)
 texture = ExtResource("8_pm6ty")
 
 [node name="WinnerCrown" type="Sprite2D" parent="."]
-position = Vector2(191, 252)
+position = Vector2(190, 252)
 texture = ExtResource("9_jakop")
