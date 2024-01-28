@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://f0p37o2dpe1x"]
+
+[ext_resource type="Script" path="res://scripts/minigame.gd" id="1_dvs3w"]
+[ext_resource type="Script" path="res://scripts/punchline.gd" id="1_qwemb"]
+[ext_resource type="Theme" uid="uid://biufirpv8wudy" path="res://assets/instruction_theme.tres" id="3_mmoku"]
+[ext_resource type="Texture2D" uid="uid://bk7opscjjinlk" path="res://assets/sprites/ui/button_start_black.png" id="4_pkaq5"]
+[ext_resource type="Texture2D" uid="uid://cj7jjhry6ru8l" path="res://assets/sprites/ui/button_start_black_pressed.png" id="5_jv5nu"]
+
+[node name="Punchline" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_qwemb")
+
+[node name="MinigameController" type="Node2D" parent="."]
+script = ExtResource("1_dvs3w")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 1151.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="nameText" type="RichTextLabel" parent="."]
+offset_left = 420.0
+offset_top = 61.0
+offset_right = 717.0
+offset_bottom = 157.0
+mouse_filter = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("3_mmoku")
+theme_override_font_sizes/normal_font_size = 48
+bbcode_enabled = true
+text = "[center]Player 1[/center]"
+fit_content = true
+
+[node name="instructions" type="RichTextLabel" parent="."]
+offset_left = 334.0
+offset_top = 207.0
+offset_right = 818.0
+offset_bottom = 396.0
+mouse_filter = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("3_mmoku")
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "You are given the punchline of a joke, but not the setup. Finish the joke in a way that would make the king laugh."
+fit_content = true
+
+[node name="TextureButton" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 436.0
+offset_top = 460.0
+offset_right = 564.0
+offset_bottom = 502.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("4_pkaq5")
+texture_pressed = ExtResource("5_jv5nu")
