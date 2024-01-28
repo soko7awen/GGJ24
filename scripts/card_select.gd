@@ -23,7 +23,7 @@ func _ready():
 		4:
 			#whose line is it anyway! continuous
 			tarotSprite = "res://assets/sprites/cards/tarot_kinggambit.png"
-			toScene = "res://scenes/minigames/whatever.tscn"
+			toScene = "res://scenes/minigames/follow.tscn"
 	gameController.lastMinigame = nextMinigame
 
 func revealCard():

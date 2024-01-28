@@ -1,21 +1,21 @@
-[gd_scene load_steps=11 format=3 uid="uid://f0p37o2dpe1x"]
+[gd_scene load_steps=11 format=3 uid="uid://dipngnm4qnk3q"]
 
-[ext_resource type="Script" path="res://scripts/minigame.gd" id="1_dvs3w"]
-[ext_resource type="Theme" uid="uid://biufirpv8wudy" path="res://assets/instruction_theme.tres" id="3_mmoku"]
-[ext_resource type="Texture2D" uid="uid://bk7opscjjinlk" path="res://assets/sprites/ui/button_start_black.png" id="4_pkaq5"]
-[ext_resource type="Texture2D" uid="uid://cj7jjhry6ru8l" path="res://assets/sprites/ui/button_start_black_pressed.png" id="5_jv5nu"]
-[ext_resource type="FontFile" uid="uid://cmq4tfb8ywypo" path="res://assets/fonts/PublicPixelDots.ttf" id="6_1sbwm"]
-[ext_resource type="Texture2D" uid="uid://cxq4rjjdufbyc" path="res://assets/sprites/grey-and-white-checkerboard-pattern_thumb.jpg" id="6_er6ya"]
-[ext_resource type="Theme" uid="uid://b5i2s2wgetsyw" path="res://assets/base_theme.tres" id="6_mrg48"]
-[ext_resource type="Texture2D" uid="uid://cpwk852s6rdsn" path="res://assets/sprites/ui/button_blank_black.png" id="7_fta72"]
-[ext_resource type="Script" path="res://scripts/scrolling.gd" id="7_osq33"]
-[ext_resource type="Texture2D" uid="uid://cx5uvxekqmydp" path="res://assets/sprites/ui/button_blank_black_pressed.png" id="8_5gj2x"]
+[ext_resource type="Script" path="res://scripts/minigame.gd" id="1_71en2"]
+[ext_resource type="Texture2D" uid="uid://cxq4rjjdufbyc" path="res://assets/sprites/grey-and-white-checkerboard-pattern_thumb.jpg" id="2_m5oxn"]
+[ext_resource type="Script" path="res://scripts/scrolling.gd" id="3_mqq1r"]
+[ext_resource type="Theme" uid="uid://biufirpv8wudy" path="res://assets/instruction_theme.tres" id="4_ktohp"]
+[ext_resource type="Theme" uid="uid://b5i2s2wgetsyw" path="res://assets/base_theme.tres" id="5_6h6mx"]
+[ext_resource type="FontFile" uid="uid://cmq4tfb8ywypo" path="res://assets/fonts/PublicPixelDots.ttf" id="6_f7ljw"]
+[ext_resource type="Texture2D" uid="uid://cpwk852s6rdsn" path="res://assets/sprites/ui/button_blank_black.png" id="7_br617"]
+[ext_resource type="Texture2D" uid="uid://cx5uvxekqmydp" path="res://assets/sprites/ui/button_blank_black_pressed.png" id="8_cc1dw"]
+[ext_resource type="Texture2D" uid="uid://bk7opscjjinlk" path="res://assets/sprites/ui/button_start_black.png" id="9_mncap"]
+[ext_resource type="Texture2D" uid="uid://cj7jjhry6ru8l" path="res://assets/sprites/ui/button_start_black_pressed.png" id="10_i5mwj"]
 
-[node name="Punchline" type="Node2D"]
+[node name="Freewrite" type="Node2D"]
 texture_filter = 1
 
 [node name="MinigameController" type="Node2D" parent="."]
-script = ExtResource("1_dvs3w")
+script = ExtResource("1_71en2")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = 0
@@ -37,9 +37,9 @@ offset_top = -3000.0
 offset_right = -674.0
 offset_bottom = -652.0
 scale = Vector2(2, 2)
-texture = ExtResource("6_er6ya")
+texture = ExtResource("2_m5oxn")
 stretch_mode = 1
-script = ExtResource("7_osq33")
+script = ExtResource("3_mqq1r")
 
 [node name="nameText" type="RichTextLabel" parent="BottomUI"]
 layout_mode = 0
@@ -48,7 +48,7 @@ offset_right = 1152.0
 offset_bottom = 889.0
 mouse_filter = 2
 mouse_default_cursor_shape = 2
-theme = ExtResource("3_mmoku")
+theme = ExtResource("4_ktohp")
 theme_override_font_sizes/normal_font_size = 32
 bbcode_enabled = true
 text = "[center]joke[/center]"
@@ -60,7 +60,7 @@ offset_right = 1152.0
 offset_bottom = 741.0
 mouse_filter = 2
 mouse_default_cursor_shape = 2
-theme = ExtResource("6_mrg48")
+theme = ExtResource("5_6h6mx")
 theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
 text = "[center]the joke is...[/center]"
@@ -74,8 +74,8 @@ offset_right = 950.0
 offset_bottom = 1102.0
 mouse_filter = 2
 mouse_default_cursor_shape = 2
-theme = ExtResource("3_mmoku")
-theme_override_fonts/font = ExtResource("6_1sbwm")
+theme = ExtResource("4_ktohp")
+theme_override_fonts/font = ExtResource("6_f7ljw")
 wrap_mode = 1
 caret_blink = true
 
@@ -87,8 +87,8 @@ offset_right = 564.0
 offset_bottom = 1160.0
 scale = Vector2(2, 2)
 focus_mode = 1
-texture_normal = ExtResource("7_fta72")
-texture_pressed = ExtResource("8_5gj2x")
+texture_normal = ExtResource("7_br617")
+texture_pressed = ExtResource("8_cc1dw")
 
 [node name="helpText" type="RichTextLabel" parent="BottomUI/finishButton"]
 layout_mode = 0
@@ -98,7 +98,7 @@ offset_right = 115.5
 offset_bottom = 28.0
 mouse_filter = 2
 mouse_default_cursor_shape = 2
-theme = ExtResource("3_mmoku")
+theme = ExtResource("4_ktohp")
 theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
 text = "[pulse freq=0.4 color=#000000 ease=-1.0]finish"
@@ -125,7 +125,7 @@ offset_right = 717.0
 offset_bottom = 157.0
 mouse_filter = 2
 mouse_default_cursor_shape = 2
-theme = ExtResource("3_mmoku")
+theme = ExtResource("4_ktohp")
 theme_override_font_sizes/normal_font_size = 48
 bbcode_enabled = true
 text = "[center]Player 1[/center]"
@@ -133,16 +133,16 @@ fit_content = true
 
 [node name="instructions" type="RichTextLabel" parent="TopUI"]
 layout_mode = 0
-offset_left = 334.0
-offset_top = 207.0
-offset_right = 838.0
-offset_bottom = 396.0
+offset_left = 333.0
+offset_top = 196.0
+offset_right = 837.0
+offset_bottom = 412.0
 mouse_filter = 2
 mouse_default_cursor_shape = 2
-theme = ExtResource("3_mmoku")
+theme = ExtResource("4_ktohp")
 theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
-text = "You are given the setup of a joke, but not the punchline. Finish the joke in a way that would make the king laugh."
+text = "You are given a theme to write a joke around. Create a themed joke to make the king laugh. Failure to follow the theme may result in six lashings from the king."
 fit_content = true
 
 [node name="startButton" type="TextureButton" parent="TopUI"]
@@ -153,8 +153,8 @@ offset_top = 460.0
 offset_right = 564.0
 offset_bottom = 502.0
 scale = Vector2(2, 2)
-texture_normal = ExtResource("4_pkaq5")
-texture_pressed = ExtResource("5_jv5nu")
+texture_normal = ExtResource("9_mncap")
+texture_pressed = ExtResource("10_i5mwj")
 
 [connection signal="pressed" from="BottomUI/finishButton" to="MinigameController" method="_on_finish_button_pressed"]
 [connection signal="pressed" from="TopUI/startButton" to="MinigameController" method="_on_start_button_pressed"]
