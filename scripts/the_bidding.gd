@@ -7,6 +7,7 @@ var lane = null
 var lanes = []
 
 func _ready():
+	arrowPos = main.players[0][0]
 	for i in main.players:
 		if(i[0] != main.king[0]):
 			print(i[0])
