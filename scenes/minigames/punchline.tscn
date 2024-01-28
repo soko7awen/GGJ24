@@ -1,7 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://f0p37o2dpe1x"]
+[gd_scene load_steps=10 format=3 uid="uid://f0p37o2dpe1x"]
 
 [ext_resource type="Script" path="res://scripts/minigame.gd" id="1_dvs3w"]
-[ext_resource type="Script" path="res://scripts/punchline.gd" id="1_qwemb"]
 [ext_resource type="Theme" uid="uid://biufirpv8wudy" path="res://assets/instruction_theme.tres" id="3_mmoku"]
 [ext_resource type="Texture2D" uid="uid://bk7opscjjinlk" path="res://assets/sprites/ui/button_start_black.png" id="4_pkaq5"]
 [ext_resource type="Texture2D" uid="uid://cj7jjhry6ru8l" path="res://assets/sprites/ui/button_start_black_pressed.png" id="5_jv5nu"]
@@ -13,7 +12,6 @@
 
 [node name="Punchline" type="Node2D"]
 texture_filter = 1
-script = ExtResource("1_qwemb")
 
 [node name="MinigameController" type="Node2D" parent="."]
 script = ExtResource("1_dvs3w")
@@ -32,6 +30,7 @@ offset_bottom = 40.0
 
 [node name="Background" type="TextureRect" parent="BottomUI"]
 self_modulate = Color(0.478431, 0.478431, 0.478431, 1)
+layout_mode = 0
 offset_left = -4000.0
 offset_top = -3000.0
 offset_right = -674.0
@@ -42,6 +41,7 @@ stretch_mode = 1
 script = ExtResource("7_osq33")
 
 [node name="nameText" type="RichTextLabel" parent="BottomUI"]
+layout_mode = 0
 offset_top = 732.0
 offset_right = 1152.0
 offset_bottom = 889.0
@@ -54,6 +54,7 @@ text = "[center]joke[/center]"
 fit_content = true
 
 [node name="nameText2" type="RichTextLabel" parent="BottomUI"]
+layout_mode = 0
 offset_top = 708.0
 offset_right = 1152.0
 offset_bottom = 741.0
@@ -65,6 +66,18 @@ bbcode_enabled = true
 text = "[center]the joke is...[/center]"
 fit_content = true
 
+[node name="input" type="LineEdit" parent="BottomUI"]
+layout_mode = 0
+offset_left = 198.0
+offset_top = 889.0
+offset_right = 950.0
+offset_bottom = 1102.0
+mouse_filter = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("3_mmoku")
+max_length = 200
+secret = true
+
 [node name="finishButton" type="TextureButton" parent="BottomUI"]
 layout_mode = 0
 offset_left = 436.0
@@ -72,8 +85,22 @@ offset_top = 1120.0
 offset_right = 564.0
 offset_bottom = 1160.0
 scale = Vector2(2, 2)
+focus_mode = 1
 texture_normal = ExtResource("7_fta72")
 texture_pressed = ExtResource("8_5gj2x")
+
+[node name="helpText" type="RichTextLabel" parent="BottomUI/finishButton"]
+offset_left = 15.5
+offset_top = 7.0
+offset_right = 115.5
+offset_bottom = 28.0
+mouse_filter = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("3_mmoku")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "[pulse freq=0.4 color=#000000 ease=-1.0]finish"
+fit_content = true
 
 [node name="TopUI" type="Control" parent="."]
 layout_mode = 3
@@ -83,11 +110,13 @@ offset_bottom = 40.0
 
 [node name="Background" type="ColorRect" parent="TopUI"]
 self_modulate = Color(0.458824, 0.458824, 0.458824, 1)
+layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 color = Color(0, 0, 0, 1)
 
 [node name="nameText" type="RichTextLabel" parent="TopUI"]
+layout_mode = 0
 offset_left = 420.0
 offset_top = 61.0
 offset_right = 717.0
@@ -101,6 +130,7 @@ text = "[center]Player 1[/center]"
 fit_content = true
 
 [node name="instructions" type="RichTextLabel" parent="TopUI"]
+layout_mode = 0
 offset_left = 334.0
 offset_top = 207.0
 offset_right = 818.0
@@ -115,6 +145,7 @@ fit_content = true
 
 [node name="startButton" type="TextureButton" parent="TopUI"]
 texture_filter = 1
+layout_mode = 0
 offset_left = 436.0
 offset_top = 460.0
 offset_right = 564.0
