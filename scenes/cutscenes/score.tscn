@@ -27,32 +27,32 @@ script = ExtResource("2_yp5ua")
 
 [node name="Jesters" type="Node2D" parent="."]
 
-[node name="JesterIconRed" type="Sprite2D" parent="Jesters"]
+[node name="red" type="Sprite2D" parent="Jesters"]
 position = Vector2(190, 300)
 scale = Vector2(2, 2)
 texture = ExtResource("3_5y210")
 
-[node name="JesterIconRed2" type="Sprite2D" parent="Jesters"]
+[node name="blue" type="Sprite2D" parent="Jesters"]
 position = Vector2(340, 300)
 scale = Vector2(2, 2)
 texture = ExtResource("4_hdmyy")
 
-[node name="JesterIconRed3" type="Sprite2D" parent="Jesters"]
+[node name="green" type="Sprite2D" parent="Jesters"]
 position = Vector2(490, 300)
 scale = Vector2(2, 2)
 texture = ExtResource("5_hbx1y")
 
-[node name="JesterIconRed4" type="Sprite2D" parent="Jesters"]
+[node name="yellow" type="Sprite2D" parent="Jesters"]
 position = Vector2(640, 300)
 scale = Vector2(2, 2)
 texture = ExtResource("6_rle15")
 
-[node name="JesterIconRed5" type="Sprite2D" parent="Jesters"]
+[node name="orange" type="Sprite2D" parent="Jesters"]
 position = Vector2(790, 300)
 scale = Vector2(2, 2)
 texture = ExtResource("7_1dm4k")
 
-[node name="JesterIconRed6" type="Sprite2D" parent="Jesters"]
+[node name="pink" type="Sprite2D" parent="Jesters"]
 position = Vector2(940, 300)
 scale = Vector2(2, 2)
 texture = ExtResource("8_pm6ty")
