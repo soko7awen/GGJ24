@@ -22,5 +22,7 @@ func fill_texts():
 			labelNode.visible = true
 
 func _on_press(player):
+	pass
+
+func _on_next_button_pressed():
 	main.loadScene(self,toScene)
-	

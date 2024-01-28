@@ -16,11 +16,15 @@ func _process(delta):
 	if Input.is_action_just_pressed("left"):
 		if arrowPos > 0:
 			arrowPos -= 1
+			if main.king == main.players[arrowPos]:
+				arrowPos -= 1
 		else:
 			arrowPos = main.players.size()-1
 	if Input.is_action_just_pressed("right"):
 		if arrowPos < main.players.size()-1:
 			arrowPos += 1
+			if main.king == main.players[arrowPos]:
+				arrowPos += 1
 		else:
 			arrowPos = 0
 	
