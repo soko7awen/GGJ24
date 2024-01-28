@@ -1,7 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://bmro2ygxwswx2"]
+[gd_scene load_steps=10 format=3 uid="uid://bmro2ygxwswx2"]
 
-[ext_resource type="Script" path="res://scripts/setup.gd" id="1_t50ck"]
-[ext_resource type="Script" path="res://scripts/minigame.gd" id="2_wvf5p"]
+[ext_resource type="Script" path="res://scripts/gambit.gd" id="1_vmmg1"]
 [ext_resource type="Texture2D" uid="uid://cxq4rjjdufbyc" path="res://assets/sprites/grey-and-white-checkerboard-pattern_thumb.jpg" id="3_3i41l"]
 [ext_resource type="Script" path="res://scripts/scrolling.gd" id="4_y81i0"]
 [ext_resource type="Theme" uid="uid://b5i2s2wgetsyw" path="res://assets/base_theme.tres" id="5_odow0"]
@@ -11,12 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://bk7opscjjinlk" path="res://assets/sprites/ui/button_start_black.png" id="9_tlx5v"]
 [ext_resource type="Texture2D" uid="uid://cj7jjhry6ru8l" path="res://assets/sprites/ui/button_start_black_pressed.png" id="10_sfa8f"]
 
-[node name="Setup" type="Node2D"]
+[node name="Gambit" type="Node2D"]
 texture_filter = 1
-script = ExtResource("1_t50ck")
-
-[node name="MinigameController" type="Node2D" parent="."]
-script = ExtResource("2_wvf5p")
+script = ExtResource("1_vmmg1")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = 0
@@ -65,18 +61,18 @@ mouse_default_cursor_shape = 2
 theme = ExtResource("6_aq87x")
 theme_override_font_sizes/normal_font_size = 32
 bbcode_enabled = true
-text = "[center]joke[/center]"
+text = "[center]...up to you, my Liege.[/center]"
 
-[node name="input" type="TextEdit" parent="BottomUI"]
+[node name="input" type="LineEdit" parent="BottomUI"]
 layout_mode = 0
 offset_left = 198.0
-offset_top = 889.0
+offset_top = 950.0
 offset_right = 950.0
-offset_bottom = 1102.0
+offset_bottom = 999.0
 mouse_filter = 2
 mouse_default_cursor_shape = 2
 theme = ExtResource("6_aq87x")
-wrap_mode = 1
+max_length = 32
 caret_blink = true
 
 [node name="finishButton" type="TextureButton" parent="BottomUI"]
@@ -142,7 +138,7 @@ mouse_default_cursor_shape = 2
 theme = ExtResource("6_aq87x")
 theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
-text = "You are given input from the king and must continue the story/plot/whatever. The best contribution will be chosen by the King."
+text = "You, the King, are to give a prompt to the jesters. They will continue your decree. You will choose the msot amusing response.  Max 32 characters."
 fit_content = true
 
 [node name="startButton" type="TextureButton" parent="TopUI"]
@@ -156,5 +152,5 @@ scale = Vector2(2, 2)
 texture_normal = ExtResource("9_tlx5v")
 texture_pressed = ExtResource("10_sfa8f")
 
-[connection signal="pressed" from="BottomUI/finishButton" to="MinigameController" method="_on_finish_button_pressed"]
-[connection signal="pressed" from="TopUI/startButton" to="MinigameController" method="_on_start_button_pressed"]
+[connection signal="pressed" from="BottomUI/finishButton" to="." method="_on_finish_button_pressed"]
+[connection signal="pressed" from="TopUI/startButton" to="." method="_on_start_button_pressed"]
