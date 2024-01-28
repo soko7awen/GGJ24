@@ -1,6 +1,7 @@
 extends Node2D
 @onready var arrow = $Arrow
 @onready var main = get_tree().root.get_child(0)
+@onready var toScene = "res://scenes/cutscenes/score.tscn"
 var arrowPos = 0
 var lane = null
 var lanes = []
@@ -27,3 +28,4 @@ func _process(delta):
 	if Input.is_action_just_pressed("submit"):
 		main.score[main.players[arrowPos][0]] += 1
 		main.king = main.players[arrowPos]
+		main.loadScene(self,toScene)
