@@ -12,14 +12,17 @@ func _ready():
 
 func _process(delta):
 	if Input.is_action_just_pressed("left"):
-		arrowPos -= 1
+		if arrowPos > 0:
+			arrowPos -= 1
+		else:
+			arrowPos = main.players.size()-1
 	if Input.is_action_just_pressed("right"):
-		arrowPos += 1
-	if arrowPos >= main.players.size():
-		arrowPos = 0
-	if arrowPos <= main.players.size()-1:
-		arrowPos = main.players.size()-1
-	arrow.position = $Jesters.get_child(arrowPos).get_child(0).position
+		if arrowPos < main.players.size()-1:
+			arrowPos += 1
+		else:
+			arrowPos = 0
+	
+	arrow.position = $Jesters.get_child(main.players[arrowPos][0]).get_child(0).global_position
 	if Input.is_action_just_pressed("submit"):
 		main.score[main.players[arrowPos][0]] += 1
 		main.king = main.players[arrowPos]
