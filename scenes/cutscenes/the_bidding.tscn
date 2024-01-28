@@ -35,11 +35,19 @@ position = Vector2(576, 324)
 scale = Vector2(2.4, 2.4)
 texture = ExtResource("3_mmgdr")
 
+[node name="Position" type="Node2D" parent="Jesters/red"]
+position = Vector2(-199.583, 9.16666)
+scale = Vector2(0.416667, 0.416667)
+
 [node name="blue" type="Sprite2D" parent="Jesters"]
 visible = false
 position = Vector2(576, 324)
 scale = Vector2(2.4, 2.4)
 texture = ExtResource("2_3lnxx")
+
+[node name="Position2" type="Node2D" parent="Jesters/blue"]
+position = Vector2(-127.917, 25.8333)
+scale = Vector2(0.416667, 0.416667)
 
 [node name="green" type="Sprite2D" parent="Jesters"]
 visible = false
@@ -48,11 +56,19 @@ position = Vector2(576, 324)
 scale = Vector2(2.4, 2.4)
 texture = ExtResource("4_tn62q")
 
+[node name="Position3" type="Node2D" parent="Jesters/green"]
+position = Vector2(-40, 30.4167)
+scale = Vector2(0.416667, 0.416667)
+
 [node name="yellow" type="Sprite2D" parent="Jesters"]
 visible = false
 position = Vector2(576, 324)
 scale = Vector2(2.4, 2.4)
 texture = ExtResource("5_li0f3")
+
+[node name="Position4" type="Node2D" parent="Jesters/yellow"]
+position = Vector2(55.4167, 33.3333)
+scale = Vector2(0.416667, 0.416667)
 
 [node name="orange" type="Sprite2D" parent="Jesters"]
 visible = false
@@ -60,11 +76,19 @@ position = Vector2(576, 324)
 scale = Vector2(2.4, 2.4)
 texture = ExtResource("6_7smo5")
 
+[node name="Position5" type="Node2D" parent="Jesters/orange"]
+position = Vector2(137.5, 33.3333)
+scale = Vector2(0.416667, 0.416667)
+
 [node name="pink" type="Sprite2D" parent="Jesters"]
 visible = false
 position = Vector2(576, 324)
 scale = Vector2(2.4, 2.4)
 texture = ExtResource("7_jpkby")
+
+[node name="Position6" type="Node2D" parent="Jesters/pink"]
+position = Vector2(210, 6.25)
+scale = Vector2(0.416667, 0.416667)
 
 [node name="ArrowLargeWhite" type="Sprite2D" parent="."]
 position = Vector2(94, 346)
