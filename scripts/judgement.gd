@@ -12,13 +12,13 @@ func fill_texts():
 		if i <= 2:
 			var labelNode = $CanvasLayer/Control/Answers/HBoxContainer.get_child(i)
 			labelNode.text = "\n [center]" + response[1] + "[/center]"
-			labelNode.get_node("TextureRect").texture = load("res://assets/sprites/judgement/card_blank_"+main.colorNameCipher[response[0]]+".png")
+			labelNode.get_node("TextureRect").texture = load("res://assets/sprites/judgement/card_blank_"+main.colorNameCipher[main.players[response[0]][0]]+".png")
 			labelNode.get_node("Button").connect("pressed",Callable(self,"_on_press").bind(response))
 			labelNode.visible = true
 		elif i <= 4:
 			var labelNode = $CanvasLayer/Control/Answers/HBoxContainer2.get_child(i-3)
 			labelNode.text = "\n [center]" + response[1] + "[/center]"
-			labelNode.get_node("TextureRect").texture = load("res://assets/sprites/judgement/card_blank_"+main.colorNameCipher[response[0]]+".png")
+			labelNode.get_node("TextureRect").texture = load("res://assets/sprites/judgement/card_blank_"+main.colorNameCipher[main.players[response[0]][0]]+".png")
 			labelNode.visible = true
 
 func _on_press(player):

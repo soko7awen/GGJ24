@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://d17nui37cybm" path="res://assets/sprites/jesters/icons/jester_icon_yellow.png" id="6_rle15"]
 [ext_resource type="Texture2D" uid="uid://odckq0d02dxf" path="res://assets/sprites/jesters/icons/jester_icon_orange.png" id="7_1dm4k"]
 [ext_resource type="Texture2D" uid="uid://b7sr6kwty818u" path="res://assets/sprites/jesters/icons/jester_icon_pink.png" id="8_pm6ty"]
-[ext_resource type="Theme" uid="uid://b5i2s2wgetsyw" path="res://assets/base_theme.tres" id="10_dwiwi"]
+[ext_resource type="Theme" path="res://assets/base_theme.tres" id="10_dwiwi"]
 
 [node name="Score" type="Node2D"]
 texture_filter = 1
@@ -51,6 +51,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="red" type="VBoxContainer" parent="CanvasLayer/Control/Jesters"]
+visible = false
 layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/Jesters/red"]

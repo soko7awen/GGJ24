@@ -5,7 +5,7 @@ extends Node2D
 func _ready():
 	for i in main.players:
 		$CanvasLayer/Control/Jesters.get_child(i[0]).visible = true
-	$CanvasLayer/Control/Jesters/WinnerCrown.global_position = $CanvasLayer/Control/Jesters.get_child(main.king[0]).global_position
+		#$CanvasLayer/Control/Jesters.get_child(i[0]).get_child(1).text = str(main.score[main.players[i][0]])
+	#$CanvasLayer/Control/Jesters/WinnerCrown.global_position = $CanvasLayer/Control/Jesters.get_child(main.king[0]).global_position
 	await get_tree().create_timer(5.0).timeout
-	#fix
 	main.loadScene(self,toScene)
