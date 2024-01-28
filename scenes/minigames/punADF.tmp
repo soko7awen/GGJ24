@@ -65,7 +65,7 @@ bbcode_enabled = true
 text = "[center]the joke is...[/center]"
 fit_content = true
 
-[node name="finishButton" type="TextureButton" parent="BottomUI"]
+[node name="TextureButton" type="TextureButton" parent="BottomUI"]
 layout_mode = 0
 offset_left = 436.0
 offset_top = 1120.0
@@ -123,5 +123,4 @@ scale = Vector2(2, 2)
 texture_normal = ExtResource("4_pkaq5")
 texture_pressed = ExtResource("5_jv5nu")
 
-[connection signal="pressed" from="BottomUI/finishButton" to="MinigameController" method="_on_finish_button_pressed"]
 [connection signal="pressed" from="TopUI/startButton" to="MinigameController" method="_on_start_button_pressed"]
