@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cleg57562wiio"]
 
 [ext_resource type="Script" path="res://scripts/the_card_that_flips.gd" id="1_4gl2l"]
-[ext_resource type="Theme" uid="uid://b5i2s2wgetsyw" path="res://assets/base_theme.tres" id="2_27ksd"]
+[ext_resource type="Theme" path="res://assets/base_theme.tres" id="2_27ksd"]
 [ext_resource type="Texture2D" uid="uid://cx5uvxekqmydp" path="res://assets/sprites/ui/button_blank_black_pressed.png" id="3_0g71q"]
 
 [node name="TheCardThatFlips" type="Node2D"]
@@ -11,6 +11,7 @@ script = ExtResource("1_4gl2l")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Control" type="Control" parent="CanvasLayer"]
+texture_filter = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -45,6 +46,7 @@ offset_top = -40.0
 offset_right = 64.0
 grow_horizontal = 2
 grow_vertical = 0
+scale = Vector2(2, 2)
 texture_normal = ExtResource("3_0g71q")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Control/NextButton"]
@@ -55,6 +57,7 @@ offset_right = 120.0
 offset_bottom = 32.0
 mouse_filter = 2
 theme = ExtResource("2_27ksd")
+theme_override_font_sizes/normal_font_size = 26
 text = "Next"
 fit_content = true
 
