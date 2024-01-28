@@ -5,7 +5,8 @@ var toScene = "res://scenes/cutscenes/card_select.tscn"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	main.pickKing()
+	if main.king == null:
+		main.pickKing()
 	$CanvasLayer/Control/Label.text = main.king[1]
 	$CanvasLayer/Control/Label.set("theme_override_colors/font_color",colors[main.king[0]])
 

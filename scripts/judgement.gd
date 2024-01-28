@@ -1,6 +1,6 @@
 extends Node2D
 @onready var main = get_tree().root.get_child(0)
-@onready var toScene = "res://scenes/cutscenes/card_select.tscn"
+@onready var toScene = "res://scenes/cutscenes/the_card_that_flips.tscn"
 
 func _ready():
 	fill_texts()
@@ -24,5 +24,6 @@ func fill_texts():
 func _on_press(player):
 	main.score[player[0]] += 1
 	print(main.score)
+	main.king = player
 	main.loadScene(self,toScene)
 	
