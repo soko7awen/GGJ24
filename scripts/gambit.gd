@@ -13,7 +13,7 @@ func _ready():
 
 func setTransition(nextPlayer):
 	$"TopUI/Background".color = main.colorCipher[main.players[nextPlayer][0]]
-	$jester.texture = load("res://assets/sprites/freewrite/fw_jester_"+main.colorNameCipher[main.king[0]]+"1.png")
+	$jester.texture = load("res://assets/sprites/freewrite/fw_jester_"+main.colorNameCipher[main.players[nextPlayer][0]]+"1.png")
 	$"TopUI/nameText".text = "[center]" + main.players[nextPlayer][1] + "[/center]"
 
 func _on_start_button_pressed():
@@ -30,11 +30,8 @@ func _on_finish_button_pressed():
 		responses.append([int(player), input.text])
 		$TopUI/instructions.text = "You are given input from the King and must continue the story/plot/whatever. The best contribution will be chosen by the King. Max 32 characters."
 		$BottomUI/nameText2.text = "[center]"+ $BottomUI/nameText2.text + input.text + " [/center]"
-	print(player)
-	player += 1
-	print(player)
+		player += 1
 	checkIfKing()
-	print(player)
 	if(player >= main.players.size()):
 		main.lastResponses = responses
 		main.loadScene(self,toScene)
