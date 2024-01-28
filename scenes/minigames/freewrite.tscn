@@ -4,14 +4,14 @@
 [ext_resource type="Script" path="res://scripts/minigame.gd" id="2_dlc1e"]
 [ext_resource type="Texture2D" uid="uid://cxq4rjjdufbyc" path="res://assets/sprites/grey-and-white-checkerboard-pattern_thumb.jpg" id="3_1dgkw"]
 [ext_resource type="Script" path="res://scripts/scrolling.gd" id="4_f7oo2"]
-[ext_resource type="Theme" path="res://assets/base_theme.tres" id="5_gby42"]
+[ext_resource type="Theme" uid="uid://b5i2s2wgetsyw" path="res://assets/base_theme.tres" id="5_gby42"]
 [ext_resource type="Theme" uid="uid://biufirpv8wudy" path="res://assets/instruction_theme.tres" id="6_dw8yr"]
-[ext_resource type="Texture2D" uid="uid://bwbii0f35526c" path="res://assets/sprites/ui/button_blank_black.png" id="7_rxtio"]
+[ext_resource type="Texture2D" uid="uid://cpwk852s6rdsn" path="res://assets/sprites/ui/button_blank_black.png" id="7_rxtio"]
 [ext_resource type="Texture2D" uid="uid://cx5uvxekqmydp" path="res://assets/sprites/ui/button_blank_black_pressed.png" id="8_trh83"]
-[ext_resource type="Texture2D" uid="uid://burr4j6nmi7ir" path="res://assets/sprites/ui/button_start_black.png" id="9_w5pd0"]
-[ext_resource type="Texture2D" uid="uid://cuhuqdog8w5st" path="res://assets/sprites/ui/button_start_black_pressed.png" id="10_4uena"]
+[ext_resource type="Texture2D" uid="uid://bk7opscjjinlk" path="res://assets/sprites/ui/button_start_black.png" id="9_w5pd0"]
+[ext_resource type="Texture2D" uid="uid://cj7jjhry6ru8l" path="res://assets/sprites/ui/button_start_black_pressed.png" id="10_4uena"]
 
-[node name="Gambit" type="Node2D"]
+[node name="Gambit2" type="Node2D"]
 texture_filter = 1
 script = ExtResource("1_3wlxy")
 

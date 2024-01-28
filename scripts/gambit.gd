@@ -32,7 +32,7 @@ func _on_finish_button_pressed():
 	checkIfKing()
 	if(player >= main.players.size()):
 		main.lastResponses = responses
-		main.loadScene($"..",toScene)
+		main.loadScene(self,toScene)
 	else:
 		setTransition(player)
 		input.text = ""
