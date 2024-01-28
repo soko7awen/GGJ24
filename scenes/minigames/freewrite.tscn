@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bye32jcpewok"]
+[gd_scene load_steps=12 format=3 uid="uid://bye32jcpewok"]
 
 [ext_resource type="Script" path="res://scripts/freewrite.gd" id="1_3wlxy"]
 [ext_resource type="Script" path="res://scripts/minigame.gd" id="2_dlc1e"]
@@ -6,10 +6,11 @@
 [ext_resource type="Script" path="res://scripts/scrolling.gd" id="4_f7oo2"]
 [ext_resource type="Theme" uid="uid://b5i2s2wgetsyw" path="res://assets/base_theme.tres" id="5_gby42"]
 [ext_resource type="Theme" uid="uid://biufirpv8wudy" path="res://assets/instruction_theme.tres" id="6_dw8yr"]
-[ext_resource type="Texture2D" uid="uid://cpwk852s6rdsn" path="res://assets/sprites/ui/button_blank_black.png" id="7_rxtio"]
+[ext_resource type="Texture2D" uid="uid://bwbii0f35526c" path="res://assets/sprites/ui/button_blank_black.png" id="7_rxtio"]
 [ext_resource type="Texture2D" uid="uid://cx5uvxekqmydp" path="res://assets/sprites/ui/button_blank_black_pressed.png" id="8_trh83"]
-[ext_resource type="Texture2D" uid="uid://bk7opscjjinlk" path="res://assets/sprites/ui/button_start_black.png" id="9_w5pd0"]
-[ext_resource type="Texture2D" uid="uid://cj7jjhry6ru8l" path="res://assets/sprites/ui/button_start_black_pressed.png" id="10_4uena"]
+[ext_resource type="Texture2D" uid="uid://burr4j6nmi7ir" path="res://assets/sprites/ui/button_start_black.png" id="9_w5pd0"]
+[ext_resource type="Texture2D" uid="uid://cuhuqdog8w5st" path="res://assets/sprites/ui/button_start_black_pressed.png" id="10_4uena"]
+[ext_resource type="Texture2D" uid="uid://cgiqyuowskg8k" path="res://assets/sprites/freewrite/fw_jester_red1.png" id="11_7vl7d"]
 
 [node name="Gambit2" type="Node2D"]
 texture_filter = 1
@@ -45,7 +46,7 @@ script = ExtResource("4_f7oo2")
 [node name="nameText" type="RichTextLabel" parent="BottomUI"]
 layout_mode = 0
 offset_top = 708.0
-offset_right = 1152.0
+offset_right = 590.0
 offset_bottom = 741.0
 mouse_filter = 2
 mouse_default_cursor_shape = 2
@@ -57,8 +58,9 @@ fit_content = true
 
 [node name="nameText2" type="RichTextLabel" parent="BottomUI"]
 layout_mode = 0
+offset_left = 34.0
 offset_top = 732.0
-offset_right = 1152.0
+offset_right = 591.0
 offset_bottom = 889.0
 mouse_filter = 2
 mouse_default_cursor_shape = 2
@@ -69,10 +71,10 @@ text = "[center][/center]"
 
 [node name="input" type="TextEdit" parent="BottomUI"]
 layout_mode = 0
-offset_left = 198.0
-offset_top = 889.0
-offset_right = 950.0
-offset_bottom = 1102.0
+offset_left = 31.0
+offset_top = 888.0
+offset_right = 594.0
+offset_bottom = 1101.0
 mouse_filter = 2
 mouse_default_cursor_shape = 2
 theme = ExtResource("6_dw8yr")
@@ -81,10 +83,10 @@ caret_blink = true
 
 [node name="finishButton" type="TextureButton" parent="BottomUI"]
 layout_mode = 0
-offset_left = 436.0
-offset_top = 1120.0
-offset_right = 564.0
-offset_bottom = 1160.0
+offset_left = 206.0
+offset_top = 1117.0
+offset_right = 334.0
+offset_bottom = 1157.0
 scale = Vector2(2, 2)
 focus_mode = 1
 texture_normal = ExtResource("7_rxtio")
@@ -155,6 +157,11 @@ offset_bottom = 502.0
 scale = Vector2(2, 2)
 texture_normal = ExtResource("9_w5pd0")
 texture_pressed = ExtResource("10_4uena")
+
+[node name="jester" type="Sprite2D" parent="."]
+position = Vector2(868, 926)
+scale = Vector2(2, 2)
+texture = ExtResource("11_7vl7d")
 
 [connection signal="pressed" from="BottomUI/finishButton" to="MinigameController" method="_on_finish_button_pressed"]
 [connection signal="pressed" from="TopUI/startButton" to="MinigameController" method="_on_start_button_pressed"]
