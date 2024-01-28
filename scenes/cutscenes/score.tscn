@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dd74hvdq1mrl8"]
+[gd_scene load_steps=11 format=3 uid="uid://dd74hvdq1mrl8"]
 
 [ext_resource type="Texture2D" uid="uid://bg4ckbg38kh4c" path="res://assets/sprites/scrollingStar_01.png" id="1_c08uw"]
 [ext_resource type="Script" path="res://scripts/score.gd" id="1_drelj"]
@@ -9,8 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://d17nui37cybm" path="res://assets/sprites/jesters/icons/jester_icon_yellow.png" id="6_rle15"]
 [ext_resource type="Texture2D" uid="uid://odckq0d02dxf" path="res://assets/sprites/jesters/icons/jester_icon_orange.png" id="7_1dm4k"]
 [ext_resource type="Texture2D" uid="uid://b7sr6kwty818u" path="res://assets/sprites/jesters/icons/jester_icon_pink.png" id="8_pm6ty"]
-[ext_resource type="Texture2D" uid="uid://dtsn148s5lc81" path="res://assets/sprites/jesters/icons/winner_crown.png" id="9_jakop"]
-[ext_resource type="Theme" path="res://assets/base_theme.tres" id="10_dwiwi"]
+[ext_resource type="Theme" uid="uid://b5i2s2wgetsyw" path="res://assets/base_theme.tres" id="10_dwiwi"]
 
 [node name="Score" type="Node2D"]
 texture_filter = 1
@@ -121,7 +120,3 @@ texture = ExtResource("8_pm6ty")
 [node name="Label" type="Label" parent="CanvasLayer/Control/Jesters/pink"]
 layout_mode = 2
 theme = ExtResource("10_dwiwi")
-
-[node name="WinnerCrown" type="Sprite2D" parent="CanvasLayer/Control/Jesters"]
-position = Vector2(35, 0)
-texture = ExtResource("9_jakop")
