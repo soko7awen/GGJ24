@@ -14,6 +14,12 @@ position = Vector2(576, 332)
 scale = Vector2(2.45, 2.45)
 texture = ExtResource("1_dlihd")
 
+[node name="WinCrown" type="Sprite2D" parent="."]
+position = Vector2(576, -100)
+scale = Vector2(2, 2)
+texture = ExtResource("4_kpdr5")
+script = ExtResource("5_thmdw")
+
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = -27499.0
 offset_top = -19431.0
@@ -24,9 +30,3 @@ texture = ExtResource("1_kc7gq")
 stretch_mode = 1
 script = ExtResource("2_3cctk")
 SPEED = 100
-
-[node name="WinCrown" type="Sprite2D" parent="."]
-position = Vector2(576, -100)
-scale = Vector2(2, 2)
-texture = ExtResource("4_kpdr5")
-script = ExtResource("5_thmdw")
