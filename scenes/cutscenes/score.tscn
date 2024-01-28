@@ -58,5 +58,6 @@ scale = Vector2(2, 2)
 texture = ExtResource("8_pm6ty")
 
 [node name="WinnerCrown" type="Sprite2D" parent="."]
-position = Vector2(190, 252)
+position = Vector2(190, 240)
+scale = Vector2(1.5, 1.5)
 texture = ExtResource("9_jakop")
