@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dxu7is3jch802"]
+[gd_scene load_steps=11 format=3 uid="uid://dxu7is3jch802"]
 
 [ext_resource type="Script" path="res://scripts/the_bidding.gd" id="1_kpsoo"]
 [ext_resource type="Texture2D" uid="uid://cffrfja01va0j" path="res://assets/sprites/judgement/blank_background.png" id="1_xy3f7"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://kjn845nn6m23" path="res://assets/sprites/judgement/Jjesters/Jjester_yellow.png" id="5_li0f3"]
 [ext_resource type="Texture2D" uid="uid://c56ovd57lg32i" path="res://assets/sprites/judgement/Jjesters/Jjester_orange.png" id="6_7smo5"]
 [ext_resource type="Texture2D" uid="uid://s17fir16vts4" path="res://assets/sprites/judgement/Jjesters/Jjester_pink.png" id="7_jpkby"]
+[ext_resource type="Texture2D" uid="uid://ubobbuxwk3km" path="res://assets/sprites/ui/arrow_large_white.png" id="10_4h78u"]
 
 [node name="TheBidding" type="Node2D"]
 texture_filter = 1
@@ -20,7 +21,7 @@ position = Vector2(578, 323)
 scale = Vector2(2.45, 2.45)
 texture = ExtResource("1_xy3f7")
 
-[node name="JkingBlue" type="Sprite2D" parent="."]
+[node name="king" type="Sprite2D" parent="."]
 z_index = -1
 position = Vector2(576, 324)
 scale = Vector2(2.4, 2.4)
@@ -28,33 +29,45 @@ texture = ExtResource("2_g6div")
 
 [node name="Jesters" type="Node2D" parent="."]
 
-[node name="JjesterBlue2" type="Sprite2D" parent="Jesters"]
+[node name="blue" type="Sprite2D" parent="Jesters"]
+visible = false
 position = Vector2(576, 324)
 scale = Vector2(2.4, 2.4)
 texture = ExtResource("2_3lnxx")
 
-[node name="JjesterBlue" type="Sprite2D" parent="Jesters"]
+[node name="red" type="Sprite2D" parent="Jesters"]
+visible = false
 position = Vector2(576, 324)
 scale = Vector2(2.4, 2.4)
 texture = ExtResource("3_mmgdr")
 
-[node name="JjesterBlue3" type="Sprite2D" parent="Jesters"]
+[node name="green" type="Sprite2D" parent="Jesters"]
+visible = false
 z_index = -1
 position = Vector2(576, 324)
 scale = Vector2(2.4, 2.4)
 texture = ExtResource("4_tn62q")
 
-[node name="JjesterBlue4" type="Sprite2D" parent="Jesters"]
+[node name="yellow" type="Sprite2D" parent="Jesters"]
+visible = false
 position = Vector2(576, 324)
 scale = Vector2(2.4, 2.4)
 texture = ExtResource("5_li0f3")
 
-[node name="JjesterBlue5" type="Sprite2D" parent="Jesters"]
+[node name="orange" type="Sprite2D" parent="Jesters"]
+visible = false
 position = Vector2(576, 324)
 scale = Vector2(2.4, 2.4)
 texture = ExtResource("6_7smo5")
 
-[node name="JjesterBlue6" type="Sprite2D" parent="Jesters"]
+[node name="pink" type="Sprite2D" parent="Jesters"]
+visible = false
 position = Vector2(576, 324)
 scale = Vector2(2.4, 2.4)
 texture = ExtResource("7_jpkby")
+
+[node name="ArrowLargeWhite" type="Sprite2D" parent="."]
+position = Vector2(94, 346)
+rotation = 4.71239
+scale = Vector2(2, 2)
+texture = ExtResource("10_4h78u")
