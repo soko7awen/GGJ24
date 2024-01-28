@@ -13,10 +13,10 @@ scale = Vector2(2.45, 2.45)
 texture = ExtResource("1_dlihd")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -4000.0
-offset_top = -3000.0
-offset_right = 7248.0
-offset_bottom = 5314.0
+offset_left = -27499.0
+offset_top = -19431.0
+offset_right = -16251.0
+offset_bottom = -11117.0
 scale = Vector2(3, 3)
 texture = ExtResource("1_kc7gq")
 stretch_mode = 1

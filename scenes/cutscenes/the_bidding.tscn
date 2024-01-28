@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://dxu7is3jch802"]
 
-[ext_resource type="Script" path="res://scenes/cutscenes/the_bidding.gd" id="1_kpsoo"]
+[ext_resource type="Script" path="res://scripts/the_bidding.gd" id="1_kpsoo"]
 [ext_resource type="Texture2D" uid="uid://cffrfja01va0j" path="res://assets/sprites/judgement/blank_background.png" id="1_xy3f7"]
 [ext_resource type="Texture2D" uid="uid://b4p0g5j7el6kf" path="res://assets/sprites/judgement/Jjesters/Jjester_blue.png" id="2_3lnxx"]
 [ext_resource type="Texture2D" uid="uid://dhoh7lr5ojaos" path="res://assets/sprites/judgement/Jkings/Jking_blue.png" id="2_g6div"]
