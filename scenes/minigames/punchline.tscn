@@ -1,5 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://f0p37o2dpe1x"]
+[gd_scene load_steps=12 format=3 uid="uid://f0p37o2dpe1x"]
 
+[ext_resource type="Script" path="res://scripts/punchline.gd" id="1_4n0ut"]
 [ext_resource type="Script" path="res://scripts/minigame.gd" id="1_dvs3w"]
 [ext_resource type="Theme" uid="uid://biufirpv8wudy" path="res://assets/instruction_theme.tres" id="3_mmoku"]
 [ext_resource type="Texture2D" uid="uid://bk7opscjjinlk" path="res://assets/sprites/ui/button_start_black.png" id="4_pkaq5"]
@@ -7,12 +8,13 @@
 [ext_resource type="FontFile" uid="uid://cmq4tfb8ywypo" path="res://assets/fonts/PublicPixelDots.ttf" id="6_1sbwm"]
 [ext_resource type="Texture2D" uid="uid://cxq4rjjdufbyc" path="res://assets/sprites/grey-and-white-checkerboard-pattern_thumb.jpg" id="6_er6ya"]
 [ext_resource type="Theme" uid="uid://b5i2s2wgetsyw" path="res://assets/base_theme.tres" id="6_mrg48"]
-[ext_resource type="Texture2D" uid="uid://cpwk852s6rdsn" path="res://assets/sprites/ui/button_blank_black.png" id="7_fta72"]
+[ext_resource type="Texture2D" uid="uid://bwbii0f35526c" path="res://assets/sprites/ui/button_blank_black.png" id="7_fta72"]
 [ext_resource type="Script" path="res://scripts/scrolling.gd" id="7_osq33"]
 [ext_resource type="Texture2D" uid="uid://cx5uvxekqmydp" path="res://assets/sprites/ui/button_blank_black_pressed.png" id="8_5gj2x"]
 
 [node name="Punchline" type="Node2D"]
 texture_filter = 1
+script = ExtResource("1_4n0ut")
 
 [node name="MinigameController" type="Node2D" parent="."]
 script = ExtResource("1_dvs3w")
@@ -43,18 +45,6 @@ script = ExtResource("7_osq33")
 
 [node name="nameText" type="RichTextLabel" parent="BottomUI"]
 layout_mode = 0
-offset_top = 732.0
-offset_right = 1152.0
-offset_bottom = 889.0
-mouse_filter = 2
-mouse_default_cursor_shape = 2
-theme = ExtResource("3_mmoku")
-theme_override_font_sizes/normal_font_size = 32
-bbcode_enabled = true
-text = "[center]joke[/center]"
-
-[node name="nameText2" type="RichTextLabel" parent="BottomUI"]
-layout_mode = 0
 offset_top = 708.0
 offset_right = 1152.0
 offset_bottom = 741.0
@@ -63,8 +53,20 @@ mouse_default_cursor_shape = 2
 theme = ExtResource("6_mrg48")
 theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
-text = "[center]the joke is...[/center]"
+text = "[center]the punchline is...[/center]"
 fit_content = true
+
+[node name="nameText2" type="RichTextLabel" parent="BottomUI"]
+layout_mode = 0
+offset_top = 732.0
+offset_right = 1152.0
+offset_bottom = 889.0
+mouse_filter = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("3_mmoku")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[center][/center]"
 
 [node name="input" type="TextEdit" parent="BottomUI"]
 layout_mode = 0

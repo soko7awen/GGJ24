@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bg4ckbg38kh4c" path="res://assets/sprites/scrollingStar_01.png" id="2_x4awn"]
 [ext_resource type="Script" path="res://scripts/scrolling.gd" id="3_01w78"]
 [ext_resource type="Texture2D" uid="uid://b8rr5lua56q83" path="res://assets/sprites/cards/tarot_back.png" id="4_24mv7"]
-[ext_resource type="Script" path="res://scripts/Card.gd" id="5_mrpq8"]
+[ext_resource type="Script" path="res://scripts/card.gd" id="5_mrpq8"]
 [ext_resource type="Texture2D" uid="uid://cgusjcqtbwnyy" path="res://assets/sprites/hand.png" id="5_xmgkf"]
 [ext_resource type="Theme" uid="uid://b5i2s2wgetsyw" path="res://assets/base_theme.tres" id="6_lym3w"]
 

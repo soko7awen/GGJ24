@@ -33,9 +33,9 @@ script = ExtResource("3_fmaw2")
 layout_mode = 0
 offset_left = 544.0
 offset_top = 164.0
-offset_right = 602.0
+offset_right = 622.0
 offset_bottom = 203.0
-text = "title"
+text = "Jester jab"
 
 [node name="playButton" type="TextureButton" parent="UI"]
 layout_mode = 0
