@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://drp4yucappajn"]
+[gd_scene load_steps=13 format=3 uid="uid://drp4yucappajn"]
 
 [ext_resource type="Script" path="res://scripts/minigame.gd" id="1_fdfpt"]
 [ext_resource type="Script" path="res://scripts/setup.gd" id="1_nji73"]
@@ -7,6 +7,7 @@
 [ext_resource type="Theme" uid="uid://biufirpv8wudy" path="res://assets/instruction_theme.tres" id="4_ypedy"]
 [ext_resource type="Theme" path="res://assets/base_theme.tres" id="5_3uprv"]
 [ext_resource type="Texture2D" uid="uid://bwbii0f35526c" path="res://assets/sprites/ui/button_blank_black.png" id="6_36y1t"]
+[ext_resource type="FontFile" uid="uid://cmq4tfb8ywypo" path="res://assets/fonts/PublicPixelDots.ttf" id="7_2j0wy"]
 [ext_resource type="Texture2D" uid="uid://cx5uvxekqmydp" path="res://assets/sprites/ui/button_blank_black_pressed.png" id="7_xchak"]
 [ext_resource type="Texture2D" uid="uid://burr4j6nmi7ir" path="res://assets/sprites/ui/button_start_black.png" id="8_td6l6"]
 [ext_resource type="Texture2D" uid="uid://cuhuqdog8w5st" path="res://assets/sprites/ui/button_start_black_pressed.png" id="9_j57it"]
@@ -44,9 +45,9 @@ stretch_mode = 1
 script = ExtResource("3_4b4pm")
 
 [node name="nameText" type="RichTextLabel" parent="BottomUI"]
-layout_mode = 0
+offset_left = 35.0
 offset_top = 708.0
-offset_right = 589.0
+offset_right = 628.0
 offset_bottom = 741.0
 mouse_filter = 2
 mouse_default_cursor_shape = 2
@@ -57,9 +58,9 @@ text = "[center]the build-up is...[/center]"
 fit_content = true
 
 [node name="nameText2" type="RichTextLabel" parent="BottomUI"]
-layout_mode = 0
+offset_left = 35.0
 offset_top = 732.0
-offset_right = 589.0
+offset_right = 628.0
 offset_bottom = 889.0
 mouse_filter = 2
 mouse_default_cursor_shape = 2
@@ -69,22 +70,22 @@ bbcode_enabled = true
 text = "[center][/center]"
 
 [node name="input" type="TextEdit" parent="BottomUI"]
-layout_mode = 0
+offset_left = 35.0
 offset_top = 889.0
-offset_right = 589.0
+offset_right = 636.0
 offset_bottom = 1102.0
 mouse_filter = 2
 mouse_default_cursor_shape = 2
 theme = ExtResource("4_ypedy")
+theme_override_fonts/font = ExtResource("7_2j0wy")
 wrap_mode = 1
 caret_blink = true
 
 [node name="finishButton" type="TextureButton" parent="BottomUI"]
-layout_mode = 0
-offset_left = 187.0
-offset_top = 1119.0
-offset_right = 315.0
-offset_bottom = 1159.0
+offset_left = 212.0
+offset_top = 1133.0
+offset_right = 340.0
+offset_bottom = 1173.0
 scale = Vector2(2, 2)
 focus_mode = 1
 texture_normal = ExtResource("6_36y1t")

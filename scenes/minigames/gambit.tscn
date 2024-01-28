@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/gambit.gd" id="1_vmmg1"]
 [ext_resource type="Texture2D" uid="uid://cxq4rjjdufbyc" path="res://assets/sprites/grey-and-white-checkerboard-pattern_thumb.jpg" id="3_3i41l"]
 [ext_resource type="Script" path="res://scripts/scrolling.gd" id="4_y81i0"]
-[ext_resource type="Theme" uid="uid://b5i2s2wgetsyw" path="res://assets/base_theme.tres" id="5_odow0"]
+[ext_resource type="Theme" path="res://assets/base_theme.tres" id="5_odow0"]
 [ext_resource type="Theme" uid="uid://biufirpv8wudy" path="res://assets/instruction_theme.tres" id="6_aq87x"]
 [ext_resource type="Texture2D" uid="uid://bwbii0f35526c" path="res://assets/sprites/ui/button_blank_black.png" id="7_qt2hx"]
 [ext_resource type="Texture2D" uid="uid://cx5uvxekqmydp" path="res://assets/sprites/ui/button_blank_black_pressed.png" id="8_ix4m6"]
@@ -40,10 +40,9 @@ stretch_mode = 1
 script = ExtResource("4_y81i0")
 
 [node name="nameText" type="RichTextLabel" parent="BottomUI"]
-layout_mode = 0
-offset_left = 56.0
+offset_left = 35.0
 offset_top = 708.0
-offset_right = 617.0
+offset_right = 628.0
 offset_bottom = 741.0
 mouse_filter = 2
 mouse_default_cursor_shape = 2
@@ -54,11 +53,10 @@ text = "[center]the joke is...[/center]"
 fit_content = true
 
 [node name="nameText2" type="RichTextLabel" parent="BottomUI"]
-layout_mode = 0
-offset_left = 32.0
+offset_left = 35.0
 offset_top = 732.0
-offset_right = 635.0
-offset_bottom = 991.0
+offset_right = 628.0
+offset_bottom = 889.0
 mouse_filter = 2
 mouse_default_cursor_shape = 2
 theme = ExtResource("6_aq87x")
@@ -68,9 +66,9 @@ text = "[center]...up to you, my Liege.[/center]"
 
 [node name="input" type="LineEdit" parent="BottomUI"]
 layout_mode = 0
-offset_left = 32.0
+offset_left = 35.0
 offset_top = 999.0
-offset_right = 617.0
+offset_right = 620.0
 offset_bottom = 1048.0
 mouse_filter = 2
 mouse_default_cursor_shape = 2
@@ -79,11 +77,10 @@ max_length = 32
 caret_blink = true
 
 [node name="finishButton" type="TextureButton" parent="BottomUI"]
-layout_mode = 0
-offset_left = 195.0
-offset_top = 1066.0
-offset_right = 323.0
-offset_bottom = 1106.0
+offset_left = 212.0
+offset_top = 1133.0
+offset_right = 340.0
+offset_bottom = 1173.0
 scale = Vector2(2, 2)
 focus_mode = 1
 texture_normal = ExtResource("7_qt2hx")

@@ -147,6 +147,7 @@ theme = ExtResource("2_27ksd")
 bbcode_enabled = true
 
 [node name="NextButton" type="TextureButton" parent="."]
+visible = false
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
