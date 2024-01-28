@@ -51,7 +51,6 @@ theme = ExtResource("3_mmoku")
 theme_override_font_sizes/normal_font_size = 32
 bbcode_enabled = true
 text = "[center]joke[/center]"
-fit_content = true
 
 [node name="nameText2" type="RichTextLabel" parent="BottomUI"]
 layout_mode = 0
@@ -66,7 +65,7 @@ bbcode_enabled = true
 text = "[center]the joke is...[/center]"
 fit_content = true
 
-[node name="input" type="LineEdit" parent="BottomUI"]
+[node name="input" type="TextEdit" parent="BottomUI"]
 layout_mode = 0
 offset_left = 198.0
 offset_top = 889.0
@@ -75,8 +74,6 @@ offset_bottom = 1102.0
 mouse_filter = 2
 mouse_default_cursor_shape = 2
 theme = ExtResource("3_mmoku")
-max_length = 200
-secret = true
 
 [node name="finishButton" type="TextureButton" parent="BottomUI"]
 layout_mode = 0

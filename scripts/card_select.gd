@@ -10,17 +10,20 @@ func _ready():
 	match nextMinigame:
 		1:
 			# punchline picker !
-			tarotSprite = "res://assets/sprites/jesters/jester_blue.png"
+			tarotSprite = "res://assets/sprites/cards/tarot_punchline.png"
 			toScene = "res://scenes/minigames/punchline.tscn"
 		2:
 			#setup sextant!
-			pass
+			tarotSprite = "res://assets/sprites/cards/tarot_buildup.png"
+			toScene = "res://scenes/minigames/setup.tscn"
 		3:
 			#free write !
-			pass
-		5:
+			tarotSprite = "res://assets/sprites/cards/tarot_freewrite.png"
+			toScene = "res://scenes/minigames/freewrite.tscn"
+		4:
 			#whose line is it anyway! continuous
-			pass
+			tarotSprite = "" #soon
+			toScene = "res://scenes/minigames/whatever.tscn"
 	gameController.lastMinigame = nextMinigame
 
 func revealCard():
