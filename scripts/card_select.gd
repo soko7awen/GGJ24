@@ -1,12 +1,12 @@
 extends Node2D
 @onready var gameController = $".."
-var nextMinigame = randi_range(1,4)
+var nextMinigame = randi_range(1,3)
 var tarotSprite
 var toScene
 
 func _ready():
 	while(nextMinigame == gameController.lastMinigame):
-		nextMinigame = randi_range(1,4)
+		nextMinigame = randi_range(1,3)
 	match nextMinigame:
 		1:
 			# punchline picker !
