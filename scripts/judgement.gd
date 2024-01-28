@@ -7,21 +7,22 @@ func _ready():
 
 func fill_texts():
 	$CanvasLayer/Control/Container/Prompt.text = "[center]" + main.prompt + "[/center]"
-	$CanvasLayer/Control/Jking.texture = load("res://assets/sprites/judgement/Jkings/Jking_"+main.colorNameCipher[main.king[0]]+".png")
 	for i in main.lastResponses.size():
 		var response = main.lastResponses[i]
 		if i <= 2:
 			var labelNode = $CanvasLayer/Control/Answers/HBoxContainer.get_child(i)
-			labelNode.text = "[center]" + response[1] + "[/center]"
-			labelNode.get_node("ColorRect").color = main.colorCipher[response[0]]
+			labelNode.text = "\n [center]" + response[1] + "[/center]"
+			labelNode.get_node("TextureRect").texture = load("res://assets/sprites/judgement/card_blank_"+main.colorNameCipher[main.players[response[0]][0]]+".png")
 			labelNode.get_node("Button").connect("pressed",Callable(self,"_on_press").bind(response))
 			labelNode.visible = true
 		elif i <= 4:
 			var labelNode = $CanvasLayer/Control/Answers/HBoxContainer2.get_child(i-3)
-			labelNode.text = "[center]" + response[1] + "[/center]"
-			labelNode.get_node("ColorRect").color = main.colorCipher[response[0]]
+			labelNode.text = "\n [center]" + response[1] + "[/center]"
+			labelNode.get_node("TextureRect").texture = load("res://assets/sprites/judgement/card_blank_"+main.colorNameCipher[main.players[response[0]][0]]+".png")
 			labelNode.visible = true
 
 func _on_press(player):
+	pass
+
+func _on_next_button_pressed():
 	main.loadScene(self,toScene)
-	

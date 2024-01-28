@@ -17,7 +17,5 @@ func _on_next_button_pressed():
 func _on_animation_player_animation_finished(anim_name):
 	if anim_name == "Flip":
 		$TextureRect.texture = load("res://assets/sprites/kings/king_"+main.colorNameCipher[main.king[0]]+".png")
-		$Label.visible = true
 		$AnimationPlayer.play("Unflip")
-		$NextButton.visible = true
 		
