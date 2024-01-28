@@ -1,6 +1,6 @@
 extends Node2D
 @onready var gameController = $".."
-var nextMinigame = randi_range(1,1)
+var nextMinigame = randi_range(1,4)
 var tarotSprite
 var toScene
 
@@ -23,7 +23,7 @@ func _ready():
 		4:
 			#whose line is it anyway! continuous
 			tarotSprite = "res://assets/sprites/cards/tarot_kinggambit.png"
-			toScene = "res://scenes/minigames/whatever.tscn"
+			toScene = "res://scenes/minigames/gambit.tscn"
 	gameController.lastMinigame = nextMinigame
 
 func revealCard():

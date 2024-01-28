@@ -1,21 +1,240 @@
-[gd_scene load_steps=2 format=3 uid="uid://bocxgyoq20thb"]
+[gd_scene load_steps=5 format=3 uid="uid://bocxgyoq20thb"]
 
 [ext_resource type="Script" path="res://scripts/judgement.gd" id="1_k6qhw"]
+[ext_resource type="Theme" uid="uid://biufirpv8wudy" path="res://assets/instruction_theme.tres" id="2_g6acc"]
+[ext_resource type="Texture2D" uid="uid://bv8k0xqajxu5x" path="res://assets/sprites/judgement/blank_background.png" id="2_o1651"]
+[ext_resource type="Theme" uid="uid://b5i2s2wgetsyw" path="res://assets/base_theme.tres" id="3_w8bey"]
 
 [node name="Judgement" type="Node2D"]
 script = ExtResource("1_k6qhw")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="BoxContainer" type="BoxContainer" parent="CanvasLayer"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+[node name="Control" type="Control" parent="CanvasLayer"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_o1651")
+
+[node name="Container" type="Control" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -396.5
+offset_right = 345.5
+offset_bottom = 314.0
+grow_horizontal = 2
+
+[node name="Prompt" type="RichTextLabel" parent="CanvasLayer/Control/Container"]
+custom_minimum_size = Vector2(741, 0)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -64.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("2_g6acc")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+fit_content = true
+
+[node name="Answers" type="VBoxContainer" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -551.0
+offset_top = -262.0
+offset_right = 485.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/Answers"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Control/Answers/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(256, 128)
+layout_mode = 2
+theme = ExtResource("3_w8bey")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+fit_content = true
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control/Answers/HBoxContainer/RichTextLabel"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 0.545098, 1)
+
+[node name="Button" type="Button" parent="CanvasLayer/Control/Answers/HBoxContainer/RichTextLabel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="CanvasLayer/Control/Answers/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(256, 128)
+layout_mode = 2
+theme = ExtResource("3_w8bey")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+fit_content = true
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control/Answers/HBoxContainer/RichTextLabel2"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 0.545098, 1)
+
+[node name="Button" type="Button" parent="CanvasLayer/Control/Answers/HBoxContainer/RichTextLabel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="CanvasLayer/Control/Answers/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(256, 128)
+layout_mode = 2
+theme = ExtResource("3_w8bey")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+fit_content = true
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control/Answers/HBoxContainer/RichTextLabel3"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 0.545098, 1)
+
+[node name="Button" type="Button" parent="CanvasLayer/Control/Answers/HBoxContainer/RichTextLabel3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/Control/Answers"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="CanvasLayer/Control/Answers/HBoxContainer2"]
+visible = false
+custom_minimum_size = Vector2(256, 128)
+layout_mode = 2
+theme = ExtResource("3_w8bey")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+fit_content = true
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control/Answers/HBoxContainer2/RichTextLabel4"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 0.545098, 1)
+
+[node name="Button" type="Button" parent="CanvasLayer/Control/Answers/HBoxContainer2/RichTextLabel4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="CanvasLayer/Control/Answers/HBoxContainer2"]
+visible = false
+custom_minimum_size = Vector2(256, 128)
+layout_mode = 2
+theme = ExtResource("3_w8bey")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+fit_content = true
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control/Answers/HBoxContainer2/RichTextLabel5"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 0.545098, 1)
+
+[node name="Button" type="Button" parent="CanvasLayer/Control/Answers/HBoxContainer2/RichTextLabel5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 1
+flat = true
+
+[node name="Jking" type="Sprite2D" parent="CanvasLayer/Control"]
+position = Vector2(1045, 207)
+scale = Vector2(1.5, 1.5)
