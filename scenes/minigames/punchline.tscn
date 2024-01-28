@@ -74,6 +74,7 @@ offset_bottom = 1102.0
 mouse_filter = 2
 mouse_default_cursor_shape = 2
 theme = ExtResource("3_mmoku")
+wrap_mode = 1
 
 [node name="finishButton" type="TextureButton" parent="BottomUI"]
 layout_mode = 0
@@ -130,14 +131,14 @@ fit_content = true
 layout_mode = 0
 offset_left = 334.0
 offset_top = 207.0
-offset_right = 818.0
+offset_right = 838.0
 offset_bottom = 396.0
 mouse_filter = 2
 mouse_default_cursor_shape = 2
 theme = ExtResource("3_mmoku")
 theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
-text = "You are given the punchline of a joke, but not the setup. Finish the joke in a way that would make the king laugh."
+text = "You are given the setup of a joke, but not the punchline. Finish the joke in a way that would make the king laugh."
 fit_content = true
 
 [node name="startButton" type="TextureButton" parent="TopUI"]
