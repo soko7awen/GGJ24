@@ -22,6 +22,7 @@ func _on_finish_button_pressed():
 	$"../Camera2D".position.y -= 972
 	responses.append([int(player), input.text])
 	if((player + 1) > gameController.players.size()):
+		gameController.lastResponses = responses
 		gameController.loadScene(self,toScene)
 	else:
 		player += 1
