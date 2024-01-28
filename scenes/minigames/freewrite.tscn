@@ -6,10 +6,10 @@
 [ext_resource type="Script" path="res://scripts/scrolling.gd" id="4_f7oo2"]
 [ext_resource type="Theme" uid="uid://b5i2s2wgetsyw" path="res://assets/base_theme.tres" id="5_gby42"]
 [ext_resource type="Theme" uid="uid://biufirpv8wudy" path="res://assets/instruction_theme.tres" id="6_dw8yr"]
-[ext_resource type="Texture2D" uid="uid://bwbii0f35526c" path="res://assets/sprites/ui/button_blank_black.png" id="7_rxtio"]
+[ext_resource type="Texture2D" uid="uid://cpwk852s6rdsn" path="res://assets/sprites/ui/button_blank_black.png" id="7_rxtio"]
 [ext_resource type="Texture2D" uid="uid://cx5uvxekqmydp" path="res://assets/sprites/ui/button_blank_black_pressed.png" id="8_trh83"]
-[ext_resource type="Texture2D" uid="uid://burr4j6nmi7ir" path="res://assets/sprites/ui/button_start_black.png" id="9_w5pd0"]
-[ext_resource type="Texture2D" uid="uid://cuhuqdog8w5st" path="res://assets/sprites/ui/button_start_black_pressed.png" id="10_4uena"]
+[ext_resource type="Texture2D" uid="uid://bk7opscjjinlk" path="res://assets/sprites/ui/button_start_black.png" id="9_w5pd0"]
+[ext_resource type="Texture2D" uid="uid://cj7jjhry6ru8l" path="res://assets/sprites/ui/button_start_black_pressed.png" id="10_4uena"]
 
 [node name="Gambit" type="Node2D"]
 texture_filter = 1
@@ -52,7 +52,7 @@ mouse_default_cursor_shape = 2
 theme = ExtResource("5_gby42")
 theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
-text = "[center]the joke is...[/center]"
+text = "[center]the theme is...[/center]"
 fit_content = true
 
 [node name="nameText2" type="RichTextLabel" parent="BottomUI"]
@@ -142,7 +142,7 @@ mouse_default_cursor_shape = 2
 theme = ExtResource("6_dw8yr")
 theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
-text = "You are given the punchline of a joke, but not the punchline. Start the joke in a way that would make the king laugh."
+text = "You are given a theme to write a joke around. Create a themed joke to make the king laugh. Failure to follow the theme may result in six lashings from the king."
 fit_content = true
 
 [node name="startButton" type="TextureButton" parent="TopUI"]

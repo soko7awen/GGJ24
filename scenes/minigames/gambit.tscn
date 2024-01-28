@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://ddil34hahm4xt"]
+[gd_scene load_steps=11 format=3 uid="uid://bmro2ygxwswx2"]
 
 [ext_resource type="Script" path="res://scripts/setup.gd" id="1_t50ck"]
 [ext_resource type="Script" path="res://scripts/minigame.gd" id="2_wvf5p"]
@@ -6,10 +6,10 @@
 [ext_resource type="Script" path="res://scripts/scrolling.gd" id="4_y81i0"]
 [ext_resource type="Theme" uid="uid://b5i2s2wgetsyw" path="res://assets/base_theme.tres" id="5_odow0"]
 [ext_resource type="Theme" uid="uid://biufirpv8wudy" path="res://assets/instruction_theme.tres" id="6_aq87x"]
-[ext_resource type="Texture2D" uid="uid://bwbii0f35526c" path="res://assets/sprites/ui/button_blank_black.png" id="7_qt2hx"]
+[ext_resource type="Texture2D" uid="uid://cpwk852s6rdsn" path="res://assets/sprites/ui/button_blank_black.png" id="7_qt2hx"]
 [ext_resource type="Texture2D" uid="uid://cx5uvxekqmydp" path="res://assets/sprites/ui/button_blank_black_pressed.png" id="8_ix4m6"]
-[ext_resource type="Texture2D" uid="uid://burr4j6nmi7ir" path="res://assets/sprites/ui/button_start_black.png" id="9_tlx5v"]
-[ext_resource type="Texture2D" uid="uid://cuhuqdog8w5st" path="res://assets/sprites/ui/button_start_black_pressed.png" id="10_sfa8f"]
+[ext_resource type="Texture2D" uid="uid://bk7opscjjinlk" path="res://assets/sprites/ui/button_start_black.png" id="9_tlx5v"]
+[ext_resource type="Texture2D" uid="uid://cj7jjhry6ru8l" path="res://assets/sprites/ui/button_start_black_pressed.png" id="10_sfa8f"]
 
 [node name="Setup" type="Node2D"]
 texture_filter = 1
@@ -52,7 +52,7 @@ mouse_default_cursor_shape = 2
 theme = ExtResource("5_odow0")
 theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
-text = "[center]the build-up is...[/center]"
+text = "[center]the joke is...[/center]"
 fit_content = true
 
 [node name="nameText2" type="RichTextLabel" parent="BottomUI"]
@@ -65,7 +65,7 @@ mouse_default_cursor_shape = 2
 theme = ExtResource("6_aq87x")
 theme_override_font_sizes/normal_font_size = 32
 bbcode_enabled = true
-text = "[center][/center]"
+text = "[center]joke[/center]"
 
 [node name="input" type="TextEdit" parent="BottomUI"]
 layout_mode = 0
@@ -142,7 +142,7 @@ mouse_default_cursor_shape = 2
 theme = ExtResource("6_aq87x")
 theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
-text = "You are given the punchline of a joke, but not the setup. Finish the joke in a way that would make the king laugh."
+text = "You are given input from the king and must continue the story/plot/whatever. The best contribution will be chosen by the King."
 fit_content = true
 
 [node name="startButton" type="TextureButton" parent="TopUI"]
