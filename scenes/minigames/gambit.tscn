@@ -1,13 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://bmro2ygxwswx2"]
+[gd_scene load_steps=11 format=3 uid="uid://bmro2ygxwswx2"]
 
 [ext_resource type="Script" path="res://scripts/gambit.gd" id="1_vmmg1"]
 [ext_resource type="Texture2D" uid="uid://cxq4rjjdufbyc" path="res://assets/sprites/grey-and-white-checkerboard-pattern_thumb.jpg" id="3_3i41l"]
 [ext_resource type="Script" path="res://scripts/scrolling.gd" id="4_y81i0"]
-[ext_resource type="Theme" path="res://assets/base_theme.tres" id="5_odow0"]
+[ext_resource type="Theme" uid="uid://b5i2s2wgetsyw" path="res://assets/base_theme.tres" id="5_odow0"]
 [ext_resource type="Theme" uid="uid://biufirpv8wudy" path="res://assets/instruction_theme.tres" id="6_aq87x"]
 [ext_resource type="Texture2D" uid="uid://bwbii0f35526c" path="res://assets/sprites/ui/button_blank_black.png" id="7_qt2hx"]
 [ext_resource type="Texture2D" uid="uid://cx5uvxekqmydp" path="res://assets/sprites/ui/button_blank_black_pressed.png" id="8_ix4m6"]
 [ext_resource type="Texture2D" uid="uid://burr4j6nmi7ir" path="res://assets/sprites/ui/button_start_black.png" id="9_tlx5v"]
+[ext_resource type="Texture2D" uid="uid://cgiqyuowskg8k" path="res://assets/sprites/freewrite/fw_jester_red1.png" id="10_hx0aa"]
 [ext_resource type="Texture2D" uid="uid://cuhuqdog8w5st" path="res://assets/sprites/ui/button_start_black_pressed.png" id="10_sfa8f"]
 
 [node name="Gambit" type="Node2D"]
@@ -41,7 +42,7 @@ script = ExtResource("4_y81i0")
 [node name="nameText" type="RichTextLabel" parent="BottomUI"]
 layout_mode = 0
 offset_top = 708.0
-offset_right = 1152.0
+offset_right = 556.0
 offset_bottom = 741.0
 mouse_filter = 2
 mouse_default_cursor_shape = 2
@@ -54,7 +55,7 @@ fit_content = true
 [node name="nameText2" type="RichTextLabel" parent="BottomUI"]
 layout_mode = 0
 offset_top = 732.0
-offset_right = 1152.0
+offset_right = 602.0
 offset_bottom = 889.0
 mouse_filter = 2
 mouse_default_cursor_shape = 2
@@ -65,10 +66,10 @@ text = "[center]...up to you, my Liege.[/center]"
 
 [node name="input" type="LineEdit" parent="BottomUI"]
 layout_mode = 0
-offset_left = 198.0
-offset_top = 950.0
-offset_right = 950.0
-offset_bottom = 999.0
+offset_left = 23.0
+offset_top = 926.0
+offset_right = 579.0
+offset_bottom = 975.0
 mouse_filter = 2
 mouse_default_cursor_shape = 2
 theme = ExtResource("6_aq87x")
@@ -77,10 +78,10 @@ caret_blink = true
 
 [node name="finishButton" type="TextureButton" parent="BottomUI"]
 layout_mode = 0
-offset_left = 436.0
-offset_top = 1120.0
-offset_right = 564.0
-offset_bottom = 1160.0
+offset_left = 175.0
+offset_top = 1000.0
+offset_right = 303.0
+offset_bottom = 1040.0
 scale = Vector2(2, 2)
 focus_mode = 1
 texture_normal = ExtResource("7_qt2hx")
@@ -151,6 +152,11 @@ offset_bottom = 502.0
 scale = Vector2(2, 2)
 texture_normal = ExtResource("9_tlx5v")
 texture_pressed = ExtResource("10_sfa8f")
+
+[node name="jester" type="Sprite2D" parent="."]
+position = Vector2(868, 926)
+scale = Vector2(2, 2)
+texture = ExtResource("10_hx0aa")
 
 [connection signal="pressed" from="BottomUI/finishButton" to="." method="_on_finish_button_pressed"]
 [connection signal="pressed" from="TopUI/startButton" to="." method="_on_start_button_pressed"]
