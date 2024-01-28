@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cleg57562wiio"]
+[gd_scene load_steps=9 format=3 uid="uid://cleg57562wiio"]
 
 [ext_resource type="Script" path="res://scripts/the_card_that_flips.gd" id="1_4gl2l"]
 [ext_resource type="Theme" path="res://assets/base_theme.tres" id="2_27ksd"]
@@ -8,10 +8,38 @@
 
 [sub_resource type="Animation" id="Animation_qj1rq"]
 resource_name = "Card Flip"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.5, 1.5), Vector2(0, 1.5)]
+}
+
+[sub_resource type="Animation" id="Animation_e7pm5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.5, 1.5)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cvitd"]
 _data = {
-"Card Flip": SubResource("Animation_qj1rq")
+"Card Flip": SubResource("Animation_qj1rq"),
+"RESET": SubResource("Animation_e7pm5")
 }
 
 [node name="TheCardThatFlips" type="Control"]
@@ -25,7 +53,6 @@ grow_vertical = 2
 script = ExtResource("1_4gl2l")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-root_node = NodePath("")
 libraries = {
 "": SubResource("AnimationLibrary_cvitd")
 }
@@ -37,10 +64,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -113.0
-offset_top = -177.0
-offset_right = 31.0
-offset_bottom = 63.0
+offset_left = -100.0
+offset_top = -184.0
+offset_right = 44.0
+offset_bottom = 56.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.5, 1.5)
@@ -54,10 +81,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -38.0
-offset_top = 109.0
-offset_right = 28.0
-offset_bottom = 142.0
+offset_left = -33.0
+offset_top = -16.5
+offset_right = 33.0
+offset_bottom = 16.5
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_27ksd")
@@ -69,10 +96,10 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -264.0
-offset_top = -74.0
-offset_right = -136.0
-offset_bottom = -42.0
+offset_left = -274.0
+offset_top = -84.0
+offset_right = -146.0
+offset_bottom = -52.0
 grow_horizontal = 0
 grow_vertical = 0
 scale = Vector2(2, 2)
@@ -94,5 +121,3 @@ theme = ExtResource("2_27ksd")
 theme_override_font_sizes/normal_font_size = 26
 text = "Next"
 fit_content = true
-
-[connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]
