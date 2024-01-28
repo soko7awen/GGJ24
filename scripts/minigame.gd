@@ -1,5 +1,5 @@
 extends Node2D
-@onready var gameController = $"../.."
+@onready var main = get_tree().root.get_child(0)
 @onready var input = $"../BottomUI/input"
 var player = 0
 var responses = []
@@ -8,11 +8,11 @@ var toScene = "res://scenes/judgement.tscn"
 func _ready():
 	checkIfKing()
 	setTransition(player)
-	$"../BottomUI/Background".modulate = gameController.colorCipher[gameController.king[0]]
+	$"../BottomUI/Background".modulate = main.colorCipher[main.king[0]]
 
 func setTransition(nextPlayer):
-	$"../TopUI/Background".color = gameController.colorCipher[gameController.players[nextPlayer][0]]
-	$"../TopUI/nameText".text = "[center]" + gameController.players[nextPlayer][1] + "[/center]"
+	$"../TopUI/Background".color = main.colorCipher[main.players[nextPlayer][0]]
+	$"../TopUI/nameText".text = "[center]" + main.players[nextPlayer][1] + "[/center]"
 
 func _on_start_button_pressed():
 	$"../Camera2D".position.y += 972
@@ -21,9 +21,9 @@ func _on_start_button_pressed():
 func _on_finish_button_pressed():
 	$"../Camera2D".position.y -= 972
 	responses.append([int(player), input.text])
-	if((player + 1) > gameController.players.size()):
-		gameController.lastResponses = responses
-		gameController.loadScene(self,toScene)
+	if(player >= main.players.size()-2):
+		main.lastResponses = responses
+		main.loadScene(self,toScene)
 	else:
 		player += 1
 		checkIfKing()
@@ -33,5 +33,5 @@ func _on_finish_button_pressed():
 		input.release_focus()
 
 func checkIfKing():
-	if(player == gameController.king[0]):
+	if(player == main.king[0]):
 		player += 1
