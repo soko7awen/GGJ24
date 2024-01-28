@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dd74hvdq1mrl8"]
+[gd_scene load_steps=12 format=3 uid="uid://dd74hvdq1mrl8"]
 
 [ext_resource type="Texture2D" uid="uid://bg4ckbg38kh4c" path="res://assets/sprites/scrollingStar_01.png" id="1_c08uw"]
 [ext_resource type="Script" path="res://scripts/score.gd" id="1_drelj"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://odckq0d02dxf" path="res://assets/sprites/jesters/icons/jester_icon_orange.png" id="7_1dm4k"]
 [ext_resource type="Texture2D" uid="uid://b7sr6kwty818u" path="res://assets/sprites/jesters/icons/jester_icon_pink.png" id="8_pm6ty"]
 [ext_resource type="Texture2D" uid="uid://dtsn148s5lc81" path="res://assets/sprites/jesters/icons/winner_crown.png" id="9_jakop"]
+[ext_resource type="Theme" path="res://assets/base_theme.tres" id="10_dwiwi"]
 
 [node name="Score" type="Node2D"]
 texture_filter = 1
@@ -25,39 +26,102 @@ texture = ExtResource("1_c08uw")
 stretch_mode = 1
 script = ExtResource("2_yp5ua")
 
-[node name="Jesters" type="Node2D" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="red" type="Sprite2D" parent="Jesters"]
-position = Vector2(190, 300)
-scale = Vector2(2, 2)
+[node name="Control" type="Control" parent="CanvasLayer"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Jesters" type="HBoxContainer" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -220.0
+offset_top = -45.5
+offset_right = 220.0
+offset_bottom = 45.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="red" type="VBoxContainer" parent="CanvasLayer/Control/Jesters"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/Jesters/red"]
+layout_mode = 2
 texture = ExtResource("3_5y210")
 
-[node name="blue" type="Sprite2D" parent="Jesters"]
-position = Vector2(340, 300)
-scale = Vector2(2, 2)
+[node name="Label" type="Label" parent="CanvasLayer/Control/Jesters/red"]
+layout_mode = 2
+theme = ExtResource("10_dwiwi")
+
+[node name="blue" type="VBoxContainer" parent="CanvasLayer/Control/Jesters"]
+visible = false
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/Jesters/blue"]
+layout_mode = 2
 texture = ExtResource("4_hdmyy")
 
-[node name="green" type="Sprite2D" parent="Jesters"]
-position = Vector2(490, 300)
-scale = Vector2(2, 2)
+[node name="Label" type="Label" parent="CanvasLayer/Control/Jesters/blue"]
+layout_mode = 2
+theme = ExtResource("10_dwiwi")
+
+[node name="green" type="VBoxContainer" parent="CanvasLayer/Control/Jesters"]
+visible = false
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/Jesters/green"]
+layout_mode = 2
 texture = ExtResource("5_hbx1y")
 
-[node name="yellow" type="Sprite2D" parent="Jesters"]
-position = Vector2(640, 300)
-scale = Vector2(2, 2)
+[node name="Label" type="Label" parent="CanvasLayer/Control/Jesters/green"]
+layout_mode = 2
+theme = ExtResource("10_dwiwi")
+
+[node name="yellow" type="VBoxContainer" parent="CanvasLayer/Control/Jesters"]
+visible = false
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/Jesters/yellow"]
+layout_mode = 2
 texture = ExtResource("6_rle15")
 
-[node name="orange" type="Sprite2D" parent="Jesters"]
-position = Vector2(790, 300)
-scale = Vector2(2, 2)
+[node name="Label" type="Label" parent="CanvasLayer/Control/Jesters/yellow"]
+layout_mode = 2
+theme = ExtResource("10_dwiwi")
+
+[node name="orange" type="VBoxContainer" parent="CanvasLayer/Control/Jesters"]
+visible = false
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/Jesters/orange"]
+layout_mode = 2
 texture = ExtResource("7_1dm4k")
 
-[node name="pink" type="Sprite2D" parent="Jesters"]
-position = Vector2(940, 300)
-scale = Vector2(2, 2)
+[node name="Label" type="Label" parent="CanvasLayer/Control/Jesters/orange"]
+layout_mode = 2
+theme = ExtResource("10_dwiwi")
+
+[node name="pink" type="VBoxContainer" parent="CanvasLayer/Control/Jesters"]
+visible = false
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/Jesters/pink"]
+layout_mode = 2
 texture = ExtResource("8_pm6ty")
 
-[node name="WinnerCrown" type="Sprite2D" parent="."]
-position = Vector2(190, 240)
-scale = Vector2(1.5, 1.5)
+[node name="Label" type="Label" parent="CanvasLayer/Control/Jesters/pink"]
+layout_mode = 2
+theme = ExtResource("10_dwiwi")
+
+[node name="WinnerCrown" type="Sprite2D" parent="CanvasLayer/Control/Jesters"]
+position = Vector2(35, 0)
 texture = ExtResource("9_jakop")
