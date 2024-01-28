@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/gambit.gd" id="1_vmmg1"]
 [ext_resource type="Texture2D" uid="uid://cxq4rjjdufbyc" path="res://assets/sprites/grey-and-white-checkerboard-pattern_thumb.jpg" id="3_3i41l"]
 [ext_resource type="Script" path="res://scripts/scrolling.gd" id="4_y81i0"]
-[ext_resource type="Theme" path="res://assets/base_theme.tres" id="5_odow0"]
+[ext_resource type="Theme" uid="uid://b5i2s2wgetsyw" path="res://assets/base_theme.tres" id="5_odow0"]
 [ext_resource type="Theme" uid="uid://biufirpv8wudy" path="res://assets/instruction_theme.tres" id="6_aq87x"]
 [ext_resource type="Texture2D" uid="uid://bwbii0f35526c" path="res://assets/sprites/ui/button_blank_black.png" id="7_qt2hx"]
 [ext_resource type="Texture2D" uid="uid://cx5uvxekqmydp" path="res://assets/sprites/ui/button_blank_black_pressed.png" id="8_ix4m6"]
@@ -156,7 +156,7 @@ texture_normal = ExtResource("9_tlx5v")
 texture_pressed = ExtResource("10_sfa8f")
 
 [node name="jester" type="Sprite2D" parent="."]
-position = Vector2(868, 926)
+position = Vector2(891, 947)
 scale = Vector2(2, 2)
 texture = ExtResource("10_hx0aa")
 
