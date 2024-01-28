@@ -23,7 +23,6 @@ func fill_texts():
 
 func _on_press(player):
 	main.score[player[0]] += 1
-	print(main.score)
-	main.king = player
+	main.king = main.players[player[0]]
 	main.loadScene(self,toScene)
 	

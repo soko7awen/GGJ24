@@ -1,17 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://cleg57562wiio"]
+[gd_scene load_steps=8 format=3 uid="uid://cleg57562wiio"]
 
 [ext_resource type="Script" path="res://scripts/the_card_that_flips.gd" id="1_4gl2l"]
-[ext_resource type="Theme" uid="uid://b5i2s2wgetsyw" path="res://assets/base_theme.tres" id="2_27ksd"]
+[ext_resource type="Theme" path="res://assets/base_theme.tres" id="2_27ksd"]
 [ext_resource type="Texture2D" uid="uid://cx5uvxekqmydp" path="res://assets/sprites/ui/button_blank_black_pressed.png" id="3_0g71q"]
 [ext_resource type="Texture2D" uid="uid://bwbii0f35526c" path="res://assets/sprites/ui/button_blank_black.png" id="3_4rnv7"]
+[ext_resource type="Texture2D" uid="uid://b8rr5lua56q83" path="res://assets/sprites/cards/tarot_back.png" id="5_l8vcs"]
 
-[node name="TheCardThatFlips" type="Node2D"]
-texture_filter = 1
-script = ExtResource("1_4gl2l")
+[sub_resource type="Animation" id="Animation_qj1rq"]
+resource_name = "Card Flip"
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cvitd"]
+_data = {
+"Card Flip": SubResource("Animation_qj1rq")
+}
 
-[node name="Control" type="Control" parent="CanvasLayer"]
+[node name="TheCardThatFlips" type="Control"]
 texture_filter = 1
 layout_mode = 3
 anchors_preset = 15
@@ -19,40 +22,64 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_4gl2l")
 
-[node name="Label" type="Label" parent="CanvasLayer/Control"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("")
+libraries = {
+"": SubResource("AnimationLibrary_cvitd")
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -33.0
-offset_top = -16.5
-offset_right = 33.0
-offset_bottom = 16.5
+offset_left = -113.0
+offset_top = -177.0
+offset_right = 31.0
+offset_bottom = 63.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("5_l8vcs")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.0
+offset_top = 109.0
+offset_right = 28.0
+offset_bottom = 142.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_27ksd")
 
-[node name="NextButton" type="TextureButton" parent="CanvasLayer/Control"]
+[node name="NextButton" type="TextureButton" parent="."]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.556
+anchors_preset = 3
+anchor_left = 1.0
 anchor_top = 1.0
-anchor_right = 0.556
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 238.488
-offset_top = -76.0
-offset_right = 366.488
-offset_bottom = -44.0
-grow_horizontal = 2
+offset_left = -264.0
+offset_top = -74.0
+offset_right = -136.0
+offset_bottom = -42.0
+grow_horizontal = 0
 grow_vertical = 0
 scale = Vector2(2, 2)
 texture_normal = ExtResource("3_4rnv7")
 texture_pressed = ExtResource("3_0g71q")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Control/NextButton"]
+[node name="RichTextLabel" type="RichTextLabel" parent="NextButton"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -68,4 +95,4 @@ theme_override_font_sizes/normal_font_size = 26
 text = "Next"
 fit_content = true
 
-[connection signal="pressed" from="CanvasLayer/Control/NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]
