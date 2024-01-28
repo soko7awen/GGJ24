@@ -1,6 +1,6 @@
 extends Node2D
 @onready var main = get_tree().root.get_child(0)
-@onready var toScene = "res://scenes/cutscenes/the_card_that_flips.tscn"
+@onready var toScene = "res://scenes/cutscenes/the_bidding.tscn"
 
 func _ready():
 	fill_texts()

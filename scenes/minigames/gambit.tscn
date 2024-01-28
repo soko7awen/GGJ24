@@ -40,6 +40,7 @@ stretch_mode = 1
 script = ExtResource("4_y81i0")
 
 [node name="nameText" type="RichTextLabel" parent="BottomUI"]
+layout_mode = 0
 offset_left = 35.0
 offset_top = 708.0
 offset_right = 628.0
@@ -53,6 +54,7 @@ text = "[center]the joke is...[/center]"
 fit_content = true
 
 [node name="nameText2" type="RichTextLabel" parent="BottomUI"]
+layout_mode = 0
 offset_left = 35.0
 offset_top = 732.0
 offset_right = 628.0
@@ -77,6 +79,7 @@ max_length = 32
 caret_blink = true
 
 [node name="finishButton" type="TextureButton" parent="BottomUI"]
+layout_mode = 0
 offset_left = 212.0
 offset_top = 1133.0
 offset_right = 340.0
