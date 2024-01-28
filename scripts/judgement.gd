@@ -19,6 +19,7 @@ func fill_texts():
 		elif i <= 4:
 			var labelNode = $CanvasLayer/Control/Answers/HBoxContainer2.get_child(i-3)
 			labelNode.text = "[center]" + response[1] + "[/center]"
+			labelNode.get_node("ColorRect").color = main.colorCipher[response[0]]
 			labelNode.visible = true
 
 func _on_press(player):
