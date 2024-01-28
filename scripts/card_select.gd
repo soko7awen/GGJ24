@@ -1,6 +1,6 @@
 extends Node2D
 @onready var gameController = $".."
-var nextMinigame = randi_range(1,4)
+var nextMinigame = randi_range(1,1)
 var tarotSprite
 var toScene
 

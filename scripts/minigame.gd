@@ -21,11 +21,11 @@ func _on_start_button_pressed():
 func _on_finish_button_pressed():
 	$"../Camera2D".position.y -= 972
 	responses.append([int(player), input.text])
-	if(player >= main.players.size()-2):
+	player += 1
+	if(player >= main.players.size()):
 		main.lastResponses = responses
-		main.loadScene(self,toScene)
+		main.loadScene($"..",toScene)
 	else:
-		player += 1
 		checkIfKing()
 		setTransition(player)
 		input.text = ""
