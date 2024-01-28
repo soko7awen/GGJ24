@@ -8,10 +8,12 @@ var toScene = "res://scenes/judgement.tscn"
 func _ready():
 	player = main.king[0]
 	setTransition(player)
+	$jester.texture = load("res://assets/sprites/judgement/Jkings/Jking_"+main.colorNameCipher[main.king[0]]+".png")
 	$"BottomUI/Background".modulate = main.colorCipher[main.king[0]]
 
 func setTransition(nextPlayer):
 	$"TopUI/Background".color = main.colorCipher[main.players[nextPlayer][0]]
+	$jester.texture = load("res://assets/sprites/freewrite/fw_jester_"+main.colorNameCipher[main.king[0]]+"1.png")
 	$"TopUI/nameText".text = "[center]" + main.players[nextPlayer][1] + "[/center]"
 
 func _on_start_button_pressed():
