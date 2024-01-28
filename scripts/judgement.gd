@@ -23,7 +23,5 @@ func fill_texts():
 			labelNode.visible = true
 
 func _on_press(player):
-	main.score[player[0]] += 1
-	main.king = main.players[player[0]]
 	main.loadScene(self,toScene)
 	
